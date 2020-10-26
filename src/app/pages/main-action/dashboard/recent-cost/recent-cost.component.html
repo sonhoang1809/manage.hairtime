@@ -1,0 +1,26 @@
+<mat-card class="card">
+  <h4 class="card-header">Recent Costs</h4>
+  <mat-card-content class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="bg-light">
+          <tr class="border-0">
+            <th class="border-0">#</th>
+            <th class="border-0">Description</th>
+            <th class="border-0">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let recentCost of recentCosts;index as i">
+            <td>{{i+1}}</td>
+            <td> {{recentCost.costDescription}} </td>
+            <td>{{recentCost.total | currency: 'VND'}}</td>
+          </tr>
+          <tr>
+            <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View More</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

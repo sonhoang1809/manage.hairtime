@@ -1,0 +1,50 @@
+<mat-card class="card">
+  <h4 class="card-header">Recent Bookings</h4>
+  <mat-card-content class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="bg-light">
+          <tr class="border-0">
+            <th class="border-0"></th>
+            <th class="border-0">Store Name</th>
+            <th class="border-0">Price</th>
+            <th class="border-0">Booking At</th>
+            <th class="border-0">Customer</th>
+            <th class="border-0">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings">
+            <td>
+              <div class="m-r-10">
+                <img src="{{booking.store.brand.iconUrl}}" alt="user" class="rounded" width="55">
+              </div>
+            </td>
+            <td> {{booking.store.name}} </td>
+            <td>{{booking.totalPrice | currency: 'VND'}}</td>
+            <td>{{booking.bookingAt.toDateString()}}</td>
+            <td>{{booking.customer.displayName}}</td>
+            <td>
+              <ng-template [ngIf]="booking.status==0">
+                <span class="badge-dot badge-brand mr-1"></span>Booked
+              </ng-template>
+              <ng-template [ngIf]="booking.status==1">
+                <span class="badge-dot badge-primary mr-1"></span>Verified
+              </ng-template>
+              <ng-template [ngIf]="booking.status==2">
+                <span class="badge-dot badge-success mr-1"></span>Checkout
+              </ng-template>
+              <ng-template [ngIf]="booking.status==3">
+                <span class="badge-dot badge-danger mr-1"></span>Cancel
+              </ng-template>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="9"><a [routerLink]='["../management-booking"]' class="btn btn-outline-light float-right">View
+                More</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

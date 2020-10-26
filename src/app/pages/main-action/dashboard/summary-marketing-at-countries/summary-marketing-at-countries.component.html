@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <h4 class="card-header">Marketing at Countries</h4>
+  <mat-card-content class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="bg-light">
+          <tr class="border-0">
+            <th class="border-0"></th>
+            <th class="border-0">Country</th>
+            <th class="border-0">Percent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let marketingAtCountry of marketingAtCountries">
+            <td>
+              <mat-icon style="width: 50px; height:35px" svgIcon="{{marketingAtCountry.iconUrl}}"></mat-icon>
+            </td>
+            <td> {{marketingAtCountry.name}} </td>
+            <td>{{marketingAtCountry.percent}} %</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+  <div class="card-footer text-center">
+    <a href="#" class="btn-primary-link">View Details</a>
+  </div>
+</mat-card>

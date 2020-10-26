@@ -1,0 +1,15 @@
+<mat-card-content class="card-body">
+  <div class="chartjs-container" *ngIf="pieChartModel==null">
+    <mat-spinner style="margin-left:auto;
+                          margin-right:auto;" color="accent" diameter=30>
+    </mat-spinner>
+  </div>
+  <div class="chartjs-container" *ngIf="pieChartModel!=null">
+    <canvas height="{{sizeChart}}" baseChart [data]="pieChartModel.chartData" [labels]="pieChartModel.chartLabels"
+      [options]="pieChartModel.chartOptions" [colors]="pieChartModel.chartColors"
+      [legend]="pieChartModel.chartLegend"
+      [chartType]="pieChartModel.chartType" [plugins]="pieChartModel.chartPlugins">
+    </canvas>
+  </div>
+  <!--<div class="ct-chart-product ct-golden-section"></div>-->
+</mat-card-content>

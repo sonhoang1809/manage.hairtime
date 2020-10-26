@@ -1,0 +1,29 @@
+<mat-card class="card">
+  <h4 class="card-header">Marketing Media</h4>
+  <mat-card-content class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="bg-light">
+          <tr class="border-0">
+            <th class="border-0"></th>
+            <th class="border-0">Media</th>
+            <th class="border-0">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mediaMarketing of mediaMarketings">
+            <td>
+              <img style="height: 40px; width: 40px;" src="{{mediaMarketing.iconUrl}}" />
+            </td>
+            <td> {{mediaMarketing.name}} </td>
+            <td>{{mediaMarketing.cost | currency: 'VND'}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+  <div class="card-footer text-center">
+    <a href="#" class="btn-primary-link">View Details</a>
+  </div>
+</mat-card>

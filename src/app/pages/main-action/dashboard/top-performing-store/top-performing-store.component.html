@@ -1,0 +1,36 @@
+<mat-card class="card">
+  <h4 class="card-header">Top Performing Store</h4>
+  <div class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table no-wrap p-table">
+        <thead class="bg-light">
+          <tr class="border-0">
+            <th class="border-0">#</th>
+            <th class="border-0"></th>
+            <th class="border-0">Store</th>
+            <th class="border-0">Checkout</th>
+            <th class="border-0">Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let perform of performs; index as i">
+            <td>{{i+1}}</td>
+            <td>
+              <div class="m-r-10">
+                <img src="{{perform.store.brand.iconUrl}}" alt="user" class="rounded" width="55">
+              </div>
+            </td>
+            <td>{{perform.store.name}}</td>
+            <td>{{perform.totalCheckout}}</td>
+            <td>{{perform.revenue | currency: 'VND'}}</td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <a href="#" class="btn btn-outline-light float-right">View more</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</mat-card>

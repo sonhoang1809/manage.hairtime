@@ -1,0 +1,110 @@
+<div class="card-header p-4">
+  <h3 class="pt-3 d-inline-block">Booking Details</h3>
+
+  <div class="float-right">
+    <h3 class="mb-0">BookingID #{{data.id}}</h3>
+    <p>Booking At: {{data.bookingAt.toString()}}
+      <br>
+      Time Use Service: {{bookingDetails.useServiceAt.toString()}}
+    </p>
+
+  </div>
+</div>
+<div class="card-body" *ngIf="bookingDetails==null">
+  <mat-spinner style="margin-left:auto;
+                          margin-right:auto;" color="accent" diameter=30>
+  </mat-spinner>
+</div>
+<mat-dialog-content class="card-body" *ngIf="bookingDetails!=null">
+  <div class="row mb-4">
+    <div class="col-sm-6">
+      <h5 class="mb-3">Store:</h5>
+      <h3 class="text-dark mb-1">{{bookingDetails.store.name}}</h3>
+
+      <div>{{bookingDetails.store.address}}</div>
+      <div>Sikeston, MO 63801</div>
+      <div>Email: {{bookingDetails.store.owner.email}}</div>
+
+      <div>Phone: +(84)938848362</div>
+    </div>
+    <div class="col-sm-6">
+      <h5 class="mb-3">Customer:</h5>
+      <h3 class="text-dark mb-1">{{bookingDetails.customer.displayName}}</h3>
+      <div>Phone: {{bookingDetails.customer.phone}}</div>
+    </div>
+  </div>
+  <mat-dialog-content class="row mb-4">
+    <mat-horizontal-stepper [linear]="true" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Booked</ng-template>
+          <mat-form-field style="display: none;">
+            <input matInput formControlName="firstCtrl" required>
+          </mat-form-field>
+          <p>Customer booked Service! Wait for Store verify</p>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Verified</ng-template>
+          <mat-form-field style="display: none;">
+            <input matInput formControlName="secondCtrl" required>
+          </mat-form-field>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Serviced</ng-template>
+        <p>Customer was serviced</p>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </mat-dialog-content>
+  <div class="table-responsive-sm">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="center">#</th>
+          <th style="font-family: 'Montserrat', sans-serif;"></th>
+          <th style="font-family: 'Montserrat', sans-serif;">Service</th>
+          <th class="right" style="font-family: 'Montserrat', sans-serif;">Price</th>
+          <th class="right" style="font-family: 'Montserrat', sans-serif;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let service of bookingDetails.serviceBookings;index as i">
+          <td class="center">{{i+1}}</td>
+          <td class="left strong">
+            <div class="m-r-10">
+              <img src="{{service.iconUrl}}" alt="user" class="rounded" width="65" height="65">
+            </div>
+          </td>
+          <td class="left">{{service.name}}</td>
+          <td>{{service.price | currency:'VND'}}</td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td><strong class="text-dark">Total</strong></td>
+          <td>
+            <strong class="text-dark">{{total|currency:'VND'}}</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td><strong class="text-dark">Discount</strong></td>
+          <td>
+            <strong class="text-dark">{{bookingDetails.discount|currency:'VND'}}</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td><strong class="text-dark">Total After Discount</strong></td>
+          <td>
+            <strong class="text-dark">{{bookingDetails.totalPrice|currency:'VND'}}</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer bg-white">
+    <p class="mb-0"></p>
+  </div>
+</mat-dialog-content>

@@ -1,0 +1,14 @@
+<mat-card-content class="card-body">
+  <div class="chartjs-container" *ngIf="barChartModel==null">
+      <mat-spinner style="margin-left:auto;
+                          margin-right:auto; margin-top: auto;margin-bottom: auto;" color="accent" diameter=30>
+      </mat-spinner>
+  </div>
+  <div class="chartjs-container" *ngIf="barChartModel!=null">
+      <canvas height="261vw" baseChart [datasets]="barChartModel.chartData" [labels]="barChartModel.chartLabels"
+          [options]="barChartModel.chartOptions" [colors]="barChartModel.chartColors"
+          [legend]="barChartModel.chartLegend" [chartType]="barChartModel.chartType"
+          [plugins]="barChartModel.chartPlugins" >
+      </canvas>
+  </div>
+</mat-card-content>

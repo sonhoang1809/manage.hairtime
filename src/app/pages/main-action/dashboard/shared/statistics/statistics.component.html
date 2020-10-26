@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header">
+
+    <mat-form-field *ngIf="data!='NumberAccount'" appearance="outline" class="float-right">
+      <mat-label for="validationCustom05">By the time</mat-label>
+      <mat-select matNativeControl [(value)]="selected" required (selectionChange)="submit($event)">
+        <mat-option *ngFor="let statisticsBy of statisticsBys" [value]="statisticsBy.id">
+          {{statisticsBy.display}}
+        </mat-option>
+      </mat-select>
+      <mat-hint align="end">Choose 1</mat-hint>
+    </mat-form-field>
+
+    <h3 class="mb-0">{{titleChart}}</h3>
+  </div>
+
+  <app-line-chart *ngIf="isLineChart == true" [lineChartModel]="lineChart"></app-line-chart>
+  <app-bar-chart *ngIf="isBarChart == true" [barChartModel]="barChart"></app-bar-chart>
+  <app-pie-chart *ngIf="isPieChart == true" [sizeChart]="150" [pieChartModel]="pieChart"></app-pie-chart>
+</div>

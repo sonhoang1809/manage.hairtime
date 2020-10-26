@@ -1,0 +1,44 @@
+<mat-card class="card">
+  <h4 class="card-header">Recent new Store</h4>
+  <mat-card-content class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="bg-light">
+          <tr class="border-0">
+            <th class="border-0"></th>
+            <th class="border-0">Store Name</th>
+            <th class="border-0">Owner</th>
+            <th class="border-0">Create At</th>
+            <th class="border-0">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let store of stores">
+            <td>
+              <div class="m-r-10">
+                <img src="{{store.brand.iconUrl}}" alt="user" class="rounded" width="55">
+              </div>
+            </td>
+            <td> {{store.name}} </td>
+            <td>{{store.owner.displayName}}</td>
+            <td>{{store.createAt}}</td>
+            <td>
+              <ng-template [ngIf]="store.status==0">
+                <span class="badge-dot badge-brand mr-1"></span>Not verify yet
+              </ng-template>
+              <ng-template [ngIf]="store.status==1">
+                <span class="badge-dot badge-success mr-1"></span>Working
+              </ng-template>
+              <ng-template [ngIf]="store.status==2">
+                <span class="badge-dot badge-danger mr-1"></span>Stop Working
+              </ng-template>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="9"><a [routerLink]='[""]' class="btn btn-outline-light float-right">View More</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>
