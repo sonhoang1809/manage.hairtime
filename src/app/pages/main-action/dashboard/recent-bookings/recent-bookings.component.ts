@@ -1,3 +1,4 @@
+import { CurrencyUnit } from './../../../../sharings/assets/assets';
 import { BookingsData } from './../../../../sharings/data/bookings_data';
 import { Booking } from './../../../../sharings/models/booking';
 import { Component, OnInit } from '@angular/core';
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecentBookingsComponent implements OnInit {
   bookings: Booking[];
+  CurrencyUnit = CurrencyUnit;
   constructor() { }
 
   ngOnInit() {

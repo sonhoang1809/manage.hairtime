@@ -73,6 +73,12 @@
 
 
   </div>
+  <!-- filter search  -->
+  <!-- ============================================================== -->
+  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">
+    <app-booking-list-filter (customerName)="searchByCustomerName($event);"></app-booking-list-filter>
+  </div>
+  <br>
   <!-- ============================================================== -->
   <!-- end recent orders  -->
 </div>

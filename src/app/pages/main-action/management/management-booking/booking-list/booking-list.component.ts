@@ -46,6 +46,10 @@ export class BookingListComponent implements OnInit,AfterViewInit  {
     });
     this.dataSource = new MatTableDataSource<BookingView>(this.bookingViews);
   }
+  searchByCustomerName(search: string) {
+    //this.searchCostRequest.search = search;
+    //this.searchCategoryList();
+  }
   viewDetailsBooking(booking: Booking): void {
     const dialogRef = this.dialog.open<BookingDetailsComponent>(BookingDetailsComponent, {
       //panelClass: 'myapp-no-padding-dialog',

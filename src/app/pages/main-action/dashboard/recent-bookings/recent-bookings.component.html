@@ -21,7 +21,7 @@
               </div>
             </td>
             <td> {{booking.store.name}} </td>
-            <td>{{booking.totalPrice | currency: 'VND'}}</td>
+            <td>{{booking.totalPrice | currency: CurrencyUnit}}</td>
             <td>{{booking.bookingAt.toDateString()}}</td>
             <td>{{booking.customer.displayName}}</td>
             <td>

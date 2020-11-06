@@ -1,3 +1,4 @@
+import { MARKETINGICON } from './../sharings/assets/icons/media_icon';
 import { CanadaIcon, FranceIcon, JapanIcon, SouthKoreaIcon, USAIcon, VietNamIcon } from './../sharings/assets/icons/country_icon';
 
 import { ManHairCutIcon, ManHairWaxIcon, WoManHairCutIcon, FaceWashWoManIcon, FaceWashManIcon, ShampooIcon, ShavingIcon, SkinCareIcon } from './../sharings/assets/icons/service_icon';
@@ -73,6 +74,10 @@ export class GeneralHelperService {
       this.domSanitizer.bypassSecurityTrustResourceUrl(USAIcon));
       this.matIconRegistry.addSvgIcon("VietNamIcon",
       this.domSanitizer.bypassSecurityTrustResourceUrl(VietNamIcon));
+
+
+      this.matIconRegistry.addSvgIcon("Marketing-Icon",
+      this.domSanitizer.bypassSecurityTrustResourceUrl(MARKETINGICON));
   }
 
   openCenterPopupMessage(title, message) {

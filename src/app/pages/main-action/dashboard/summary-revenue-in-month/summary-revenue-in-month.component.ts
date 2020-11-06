@@ -1,3 +1,4 @@
+import { CurrencyUnit } from './../../../../sharings/assets/assets';
 import { LineChartModel } from './../../../../sharings/models/chart-model';
 import { StatisticsComponent } from './../shared/statistics/statistics.component';
 import { GeneralHelperService } from './../../../../services/general-helper.service';
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary-revenue-in-month.component.css']
 })
 export class SummaryRevenueInMonthComponent implements OnInit {
-
+  CurrencyUnit = CurrencyUnit;
 
 
   constructor(private dialog: MatDialog,

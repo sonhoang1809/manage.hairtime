@@ -1,3 +1,4 @@
+import { CurrencyUnit } from './../../../../sharings/assets/assets';
 import { StatisticsComponent } from './../shared/statistics/statistics.component';
 import { GeneralHelperService } from './../../../../services/general-helper.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary-profit-in-month.component.css']
 })
 export class SummaryProfitInMonthComponent implements OnInit {
-
+  CurrencyUnit = CurrencyUnit;
   constructor(private dialog: MatDialog,
     private generalHelper: GeneralHelperService) { }
 

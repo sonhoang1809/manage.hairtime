@@ -1,3 +1,4 @@
+import { BookingListFilterComponent } from './pages/main-action/management/management-booking/booking-list/booking-list-filter/booking-list-filter.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { VerifyActionComponent } from './sharings/components/verify-action/verify-action.component';
 import { BookingChartComponent } from './pages/main-action/management/management-booking/booking-chart/booking-chart.component';
@@ -143,7 +144,8 @@ import { DECLARATIONS } from './configs/declare-configuration';
     BookingListComponent,
     BookingChartComponent,
     BookingDetailsComponent,
-    ErrorNotFoundComponent
+    ErrorNotFoundComponent,
+    BookingListFilterComponent
   ],
   imports: [
     BrowserModule,

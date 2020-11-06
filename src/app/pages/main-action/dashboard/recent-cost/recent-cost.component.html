@@ -14,7 +14,7 @@
           <tr *ngFor="let recentCost of recentCosts;index as i">
             <td>{{i+1}}</td>
             <td> {{recentCost.costDescription}} </td>
-            <td>{{recentCost.total | currency: 'VND'}}</td>
+            <td>{{recentCost.total | currency: CurrencyUnit}}</td>
           </tr>
           <tr>
             <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View More</a></td>

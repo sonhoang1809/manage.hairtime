@@ -4,3 +4,6 @@ export const FACEBOOKLOGO = "https://raw.githubusercontent.com/sonhoang1809/Asse
 export const TWITTERLOGO = "https://raw.githubusercontent.com/sonhoang1809/Assets/master/twitter.svg";
 export const INSTAGRAMLOGO = "https://raw.githubusercontent.com/sonhoang1809/Assets/master/instagram.svg";
 export const ZALOLOGO = "https://raw.githubusercontent.com/sonhoang1809/Assets/master/zalo-logo.svg";
+
+
+export const CurrencyUnit = "USD";

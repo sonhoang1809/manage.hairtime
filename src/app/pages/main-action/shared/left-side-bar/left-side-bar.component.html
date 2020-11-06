@@ -15,8 +15,8 @@
             <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1"
               aria-controls="submenu-1">
               <mat-icon style="margin-right: 7px;">dashboard</mat-icon>Dashboard
-              <span
-                class="badge badge-success">6</span></a>
+              <span class="badge badge-success">6</span>
+            </a>
             <div id="submenu-1" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
@@ -90,22 +90,25 @@
             Management
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6"
-              aria-controls="submenu-6">
-              <mat-icon style="margin-right: 7px;">library_books</mat-icon> Booking
+            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8"
+              aria-controls="submenu-8">
+              <mat-icon style="margin-right: 7px;">account_box</mat-icon>
+              Account
             </a>
-            <div id="submenu-6" class="collapse submenu">
+            <div id="submenu-8" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse" aria-expanded="false">
+                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                    aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
-                    Booking List
+                    Account List
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse" aria-expanded="false">
+                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                    aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
-                    Chart Booking
+                    Chart Account
                   </a>
                 </li>
               </ul>
@@ -113,89 +116,124 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7"
-              aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span
-                class="badge badge-secondary">New</span></a>
+              aria-controls="submenu-7">
+              <mat-icon style="margin-right: 7px;">store</mat-icon> Store <span class="badge badge-secondary">New</span>
+            </a>
             <div id="submenu-7" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/inbox.html">Inbox</a>
+                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
+                    Store List
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/email-details.html">Email Detail</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/email-compose.html">Email Compose</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
+                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
+                    Chart Store
+                  </a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8"
-              aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
-            <div id="submenu-8" class="collapse submenu" style="">
+            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6"
+              aria-controls="submenu-6">
+              <mat-icon style="margin-right: 7px;">library_books</mat-icon> Booking
+            </a>
+            <div id="submenu-6" class="collapse submenu">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/icon-fontawesome.html">FontAwesome Icons</a>
+                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
+                    Booking List
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/icon-material.html">Material Icons</a>
+                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
+                    Chart Booking
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-18"
+              aria-controls="submenu-18">
+              <mat-icon style="margin-right: 7px;"> money_off</mat-icon>
+              Cost
+            </a>
+            <div id="submenu-18" class="collapse submenu" style="">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
+                    Cost List
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/icon-flag.html">Flag Icons</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/icon-weather.html">Weather Icon</a>
+                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
+                    Chart Cost
+                  </a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9"
-              aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+              aria-controls="submenu-9">
+              <mat-icon style="margin-right: 7px;"> attach_money</mat-icon>
+              Revenue
+            </a>
             <div id="submenu-9" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/map-google.html">Google Maps</a>
+                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
+                    Revenue List
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
+                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
+                    Chart Revenue
+                  </a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10"
-              aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
+              aria-controls="submenu-10">
+              <mat-icon svgIcon="Marketing-Icon" style="margin-right: 7px;"></mat-icon>
+              Marketing
+            </a>
             <div id="submenu-10" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Level 1</a>
+                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
+                    Marketing List
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11"
-                    aria-controls="submenu-11">Level 2</a>
-                  <div id="submenu-11" class="collapse submenu" style="">
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Level 1</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Level 2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Level 3</a>
+                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                    aria-expanded="false">
+                    <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
+                    Chart Marketing
+                  </a>
                 </li>
               </ul>
             </div>

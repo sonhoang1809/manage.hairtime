@@ -1,3 +1,4 @@
+import { CurrencyUnit } from './../../../../sharings/assets/assets';
 import { PerformsData } from './../../../../sharings/data/perform_stores_data';
 import { PerformStore } from './../../../../sharings/models/perform_store';
 import { Component, OnInit } from '@angular/core';
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopPerformingStoreComponent implements OnInit {
   performs: PerformStore[];
+  CurrencyUnit = CurrencyUnit;
   constructor() { }
 
   ngOnInit() {

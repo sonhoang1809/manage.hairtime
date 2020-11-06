@@ -1,3 +1,4 @@
+import { CurrencyUnit } from './../../../../sharings/assets/assets';
 import { NewpaperMedia, TiviMedia, SocialNetworkMedia, LeafletMedia } from './../../../../sharings/data/medias_data';
 import { MarketingMedia } from './../../../../sharings/models/social_marketing';
 import { Component, OnInit } from '@angular/core';
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryAdvertisingMediaComponent implements OnInit {
   mediaMarketings: MarketingMedia[];
+  CurrencyUnit = CurrencyUnit;
   constructor() { }
 
   ngOnInit() {
