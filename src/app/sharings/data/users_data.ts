@@ -4,8 +4,18 @@ import { Account } from './../models/account';
 
 export const Admin01: Account = {
   id: '3192014117691615',
-  displayName: "Hoàng Sơn",
+  displayName: "Hoang Son",
   email: "sonhoang1809@gmail.com",
+  phone: '0123456789',
+  photoUrl: "https://graph.facebook.com/3192014117691615/picture?type=normal",
+  role: 'ADMIN',
+  token: ''
+};
+
+export const Admin02: Account = {
+  id: '3192014117691616',
+  displayName: "Minh Vo",
+  email: "minhvo.developer@gmail.com",
   phone: '0123456789',
   photoUrl: "https://graph.facebook.com/3192014117691615/picture?type=normal",
   role: 'ADMIN',
@@ -86,7 +96,6 @@ export const OwnerVintageStore01: Account = {
   token: ''
 };
 
-
 export const Customer01: Account = {
   id: '25',
   displayName: 'Van Phuong Dat',
@@ -102,7 +111,7 @@ export const Customer02: Account = {
   email: '',
   phone: '0123456789',
   photoUrl: DefaultAvatar,
-  role: 'GUEST',
+  role: 'CUSTOMER',
   token: ''
 };
 export const Customer03: Account = {
@@ -111,7 +120,7 @@ export const Customer03: Account = {
   email: '',
   phone: '0123456789',
   photoUrl: DefaultAvatar,
-  role: 'GUEST',
+  role: 'CUSTOMER',
   token: ''
 };
 export const Customer04: Account = {
@@ -120,7 +129,7 @@ export const Customer04: Account = {
   email: '',
   phone: '0123456789',
   photoUrl: DefaultAvatar,
-  role: 'GUEST',
+  role: 'CUSTOMER',
   token: ''
 };
 export const Guest01: Account = {
@@ -151,7 +160,10 @@ export const Guest03: Account = {
   token: ''
 };
 export const Users: Account[] = [
-  Admin01,
-  OwnerBityBarber, Owner30ShineSalon4, OwnerFourRauBarber, OwnerAimShaverBarber,
-  Customer02, Customer03
+  Admin01, Admin02,
+  OwnerBityBarber,
+  OwnerFourRauBarber, OwnerAimShaverBarber,
+  OwnerVintageStore01, OwnerGentlemanStore01,
+  OwnerGudStore01, OwnerNormalStore01,
+  Customer01, Customer02, Customer03, Customer04
 ];

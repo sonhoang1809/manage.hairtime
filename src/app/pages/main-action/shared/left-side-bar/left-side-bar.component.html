@@ -38,7 +38,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1"
-                    aria-controls="submenu-1-1">Infulencer</a>
+                    aria-controls="submenu-1-1">Influencers</a>
                   <div id="submenu-1-1" class="collapse submenu" style="">
                     <ul class="nav flex-column">
                       <li class="nav-item">
@@ -56,35 +56,6 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2"
-              aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
-            <div id="submenu-2" class="collapse submenu" style="">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/general.html">General</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/carousel.html">Carousel</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/listgroup.html">List Group</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/typography.html">Typography</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/accordions.html">Accordions</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/tabs.html">Tabs</a>
-                </li>
-              </ul>
-            </div>
-          </li>
 
           <li class="nav-divider">
             Management
@@ -98,14 +69,14 @@
             <div id="submenu-8" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-account']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
                     Account List
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-account/account-chart']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
                     Chart Account
@@ -122,14 +93,14 @@
             <div id="submenu-7" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-store']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
                     Store List
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-store/store-chart']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
                     Chart Store
@@ -172,14 +143,14 @@
             <div id="submenu-18" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-cost']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
                     Cost List
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-cost/cost-chart']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
                     Chart Cost
@@ -197,14 +168,14 @@
             <div id="submenu-9" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-revenue']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
                     Revenue List
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-revenue/revenue-chart']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
                     Chart Revenue
@@ -222,14 +193,14 @@
             <div id="submenu-10" class="collapse submenu" style="">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-marketing']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> format_list_bulleted</mat-icon>
                     Marketing List
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['management-booking/booking-chart']" data-toggle="collapse"
+                  <a class="nav-link" [routerLink]="['management-marketing/marketing-chart']" data-toggle="collapse"
                     aria-expanded="false">
                     <mat-icon style="margin-right: 7px;"> insert_chart_outlined</mat-icon>
                     Chart Marketing
