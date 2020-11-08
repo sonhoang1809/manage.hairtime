@@ -36,20 +36,20 @@ export class CostListComponent implements OnInit, AfterViewInit {
   viewDetails(data): void {
     const dialogRef = this.dialog.open<CostDetailsComponent>(CostDetailsComponent, {
       panelClass: 'myapp-no-padding-dialog',
-      width: '590px',
-      height:'640px',
+      width: '600px',
+      height:'440px',
       position: { top: '70px' },
       data: data
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result != null) {
-        //console.log(result);
-        // if (result == true) {
-        //   this.searchOrderList();
-        // }
-      }
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   if (result != null) {
+    //     //console.log(result);
+    //     // if (result == true) {
+    //     //   this.searchOrderList();
+    //     // }
+    //   }
+    // });
   }
 
 }

@@ -11,6 +11,10 @@ export const CostSalary: CostType = {
   costTypeName: 'Salary'
 }
 
+export const CostTypes: CostType[] = [
+  CostMarketing, CostSalary
+];
+
 export const CostsData: CostDetails[] = [
   {
     id: 1,

@@ -39,19 +39,19 @@ export class AccountListComponent implements OnInit,AfterViewInit  {
   viewDetails(data): void {
     const dialogRef = this.dialog.open<AccountDetailsComponent>(AccountDetailsComponent, {
       panelClass: 'myapp-no-padding-dialog',
-      width: '590px',
+      width: '600px',
       height:'640px',
       position: { top: '70px' },
       data: data
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result != null) {
-        //console.log(result);
-        // if (result == true) {
-        //   this.searchOrderList();
-        // }
-      }
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   if (result != null) {
+    //     //console.log(result);
+    //     // if (result == true) {
+    //     //   this.searchOrderList();
+    //     // }
+    //   }
+    // });
   }
 }

@@ -74,23 +74,24 @@ export class AccountDetailsComponent implements OnInit {
     }
   }
   onUpdateProduct(data, id: string) {
+    this.dialogRef.close();
     //console.log(data);
-    if (this.inputFormControl.valid) {
-      this.generalService.openWaitingPopup();
-      //const dialogWaitingRef = this.dialog.open(WaitingComponent);
-      // this.categoryService.updateCategory(data, id).subscribe(
-      //   (response) => {
-      //     this.generalService.closeWaitingPopup();
-      //     this.generalService.handleMessage("Success", response.message);
-      //     this.dialogRef.close(true);
-      //   },
-      //   (error) => {
-      //     this.generalService.closeWaitingPopup();
-      //     //console.log(error);
-      //     this.generalService.handleError(error);
-      //   }
-      // );
-    }
+    // if (this.inputFormControl.valid) {
+    //   this.generalService.openWaitingPopup();
+    //   //const dialogWaitingRef = this.dialog.open(WaitingComponent);
+    //   // this.categoryService.updateCategory(data, id).subscribe(
+    //   //   (response) => {
+    //   //     this.generalService.closeWaitingPopup();
+    //   //     this.generalService.handleMessage("Success", response.message);
+    //   //     this.dialogRef.close(true);
+    //   //   },
+    //   //   (error) => {
+    //   //     this.generalService.closeWaitingPopup();
+    //   //     //console.log(error);
+    //   //     this.generalService.handleError(error);
+    //   //   }
+    //   // );
+    // }
   }
 
   onStoreCategory(data) {

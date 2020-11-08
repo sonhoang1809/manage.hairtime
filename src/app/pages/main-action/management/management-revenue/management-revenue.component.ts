@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./management-revenue.component.css']
 })
 export class ManagementRevenueComponent implements OnInit {
-
+  titleComponent: string = 'Management Revenue';
   constructor() { }
 
   ngOnInit() {
