@@ -1,3 +1,4 @@
+import { AccountDetailsUpdateComponent } from './../pages/main-action/management/management-account/account-list/account-details-update/account-details-update.component';
 import { StoreListFilterComponent } from './../pages/main-action/management/management-store/store-list/store-list-filter/store-list-filter.component';
 import { StoreDetailsComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details.component';
 import { StoreListComponent } from './../pages/main-action/management/management-store/store-list/store-list.component';
@@ -100,6 +101,7 @@ export const DECLARATIONS = [
     BookingListFilterComponent,
     AccountListComponent,
     AccountDetailsComponent,
+    AccountDetailsUpdateComponent,
     AccountListFilterComponent,
     CostListComponent,
     CostDetailsComponent,

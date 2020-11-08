@@ -29,7 +29,9 @@ export class HeaderBarComponent implements OnInit {
         phone: '0123456789',
         photoUrl: "https://graph.facebook.com/3192014117691615/picture?type=normal",
         role: 'ADMIN',
-        token: ''
+        token: '',
+        status: 1,
+        createAt: new Date('2020-10-30T19:50:00.000+09:00')
       };
     } else {
       this.account = this.authService.getAccount();

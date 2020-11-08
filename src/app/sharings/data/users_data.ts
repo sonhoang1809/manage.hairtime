@@ -6,20 +6,24 @@ export const Admin01: Account = {
   id: '3192014117691615',
   displayName: "Hoang Son",
   email: "sonhoang1809@gmail.com",
-  phone: '0123456789',
+  phone: '0789008130',
   photoUrl: "https://graph.facebook.com/3192014117691615/picture?type=normal",
   role: 'ADMIN',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 
 export const Admin02: Account = {
   id: '3192014117691616',
   displayName: "Minh Vo",
   email: "minhvo.developer@gmail.com",
-  phone: '0123456789',
-  photoUrl: "https://graph.facebook.com/3192014117691615/picture?type=normal",
+  phone: '0779913870',
+  photoUrl: DefaultAvatar,
   role: 'ADMIN',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 
 export const Owner30ShineSalon4: Account = {
@@ -29,7 +33,9 @@ export const Owner30ShineSalon4: Account = {
   phone: '0123456789',
   photoUrl: ShineLogo,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 
 export const OwnerBityBarber: Account = {
@@ -39,25 +45,31 @@ export const OwnerBityBarber: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const OwnerAimShaverBarber: Account = {
   id: '3',
   displayName: 'Johnny Dang',
   email: 'johnnydang@gmail.com',
-  phone: '077713870',
+  phone: '0777713870',
   photoUrl: AimShaverLogo,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const OwnerFourRauBarber: Account = {
   id: '4',
   displayName: 'Hà Hiền',
   email: '4raubarbershop@gmail.com',
-  phone: '093 394 53 39',
+  phone: '0933945339',
   photoUrl: Avatar4RauOwner,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const OwnerNormalStore01: Account = {
   id: '5',
@@ -66,7 +78,9 @@ export const OwnerNormalStore01: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const OwnerGudStore01: Account = {
   id: '6',
@@ -75,7 +89,9 @@ export const OwnerGudStore01: Account = {
   phone: '0123456789',
   photoUrl: GudLogo,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const OwnerGentlemanStore01: Account = {
   id: '7',
@@ -84,7 +100,9 @@ export const OwnerGentlemanStore01: Account = {
   phone: '0123456789',
   photoUrl: GentlemanLogo,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const OwnerVintageStore01: Account = {
   id: '7',
@@ -93,7 +111,9 @@ export const OwnerVintageStore01: Account = {
   phone: '0123456789',
   photoUrl: VintageLogo,
   role: 'OWNER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 
 export const Customer01: Account = {
@@ -103,7 +123,9 @@ export const Customer01: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'CUSTOMER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const Customer02: Account = {
   id: '26',
@@ -112,7 +134,9 @@ export const Customer02: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'CUSTOMER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const Customer03: Account = {
   id: '27',
@@ -121,7 +145,9 @@ export const Customer03: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'CUSTOMER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const Customer04: Account = {
   id: '27',
@@ -130,7 +156,31 @@ export const Customer04: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'CUSTOMER',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
+};
+export const Customer05: Account = {
+  id: '31',
+  displayName: 'Le Hieu',
+  email: '',
+  phone: '0144456789',
+  photoUrl: DefaultAvatar,
+  role: 'CUSTOMER',
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
+};
+export const Customer06: Account = {
+  id: '32',
+  displayName: 'Le Hong Nguyen',
+  email: '',
+  phone: '0777776789',
+  photoUrl: DefaultAvatar,
+  role: 'CUSTOMER',
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const Guest01: Account = {
   id: '28',
@@ -139,7 +189,9 @@ export const Guest01: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'GUEST',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const Guest02: Account = {
   id: '29',
@@ -148,7 +200,9 @@ export const Guest02: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'GUEST',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
 export const Guest03: Account = {
   id: '30',
@@ -157,13 +211,16 @@ export const Guest03: Account = {
   phone: '0123456789',
   photoUrl: DefaultAvatar,
   role: 'GUEST',
-  token: ''
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
-export const Users: Account[] = [
+export const AccountUsers: Account[] = [
   Admin01, Admin02,
   OwnerBityBarber,
   OwnerFourRauBarber, OwnerAimShaverBarber,
   OwnerVintageStore01, OwnerGentlemanStore01,
   OwnerGudStore01, OwnerNormalStore01,
-  Customer01, Customer02, Customer03, Customer04
+  Customer01, Customer02, Customer03, Customer04,
+  Customer05, Customer06
 ];

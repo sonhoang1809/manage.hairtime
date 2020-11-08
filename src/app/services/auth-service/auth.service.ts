@@ -109,7 +109,9 @@ export class AuthService {
       photoUrl: this.user.photoUrl,
       phone: null,
       token: this.user.authToken,
-      role: 'ADMIN'
+      role: 'ADMIN',
+      status: 1,
+      createAt: new Date('2020-10-30T19:50:00.000+09:00')
     };
     this.storage.storage.set("UserAccount", this.account);
     setTimeout(

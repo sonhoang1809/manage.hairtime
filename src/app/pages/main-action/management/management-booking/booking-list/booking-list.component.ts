@@ -46,6 +46,7 @@ export class BookingListComponent implements OnInit,AfterViewInit  {
     });
     this.dataSource = new MatTableDataSource<BookingView>(this.bookingViews);
   }
+
   searchByCustomerName(search: string) {
     //this.searchCostRequest.search = search;
     //this.searchCategoryList();

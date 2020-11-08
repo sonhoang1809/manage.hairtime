@@ -5,21 +5,23 @@ import { NotificationHeader } from './../models/notification';
 
 
 export const NotificationData : NotificationHeader[] = [
-  {
-    id : '1',
-    action: 'join to system',
-    time: '2 min ago',
-    user: {
-      id: '1',
-      displayName: '30Shine',
-      email:'30shine@gmail.com',
-      phone:'',
-      iconStoreUrl:ShineLogo,
-      photoUrl:ShineLogo,
-      token:'',
-      role:'OWNER'
-    }
-  },
+  // {
+  //   id : '1',
+  //   action: 'join to system',
+  //   time: '2 min ago',
+  //   user: {
+  //     id: '1',
+  //     displayName: '30Shine',
+  //     email:'30shine@gmail.com',
+  //     phone:'',
+  //     iconStoreUrl:ShineLogo,
+  //     photoUrl:ShineLogo,
+  //     token:'',
+  //     role:'OWNER',
+  //     status: 1,
+  //     createAt: new Date('2020-10-30T19:50:00.000+09:00')
+  //   }
+  // },
   {
     id : '2',
     action: 'join to system',
@@ -32,7 +34,9 @@ export const NotificationData : NotificationHeader[] = [
       iconStoreUrl:FourRauLogo,
       photoUrl:FourRauLogo,
       token:'',
-      role:'OWNER'
+      role:'OWNER',
+      status: 1,
+      createAt: new Date('2020-10-30T19:50:00.000+09:00')
     }
   },
   {
@@ -47,7 +51,9 @@ export const NotificationData : NotificationHeader[] = [
       iconStoreUrl:AimShaverLogo,
       photoUrl:AimShaverLogo,
       token:'',
-      role:'OWNER'
+      role:'OWNER',
+      status: 1,
+      createAt: new Date('2020-10-30T19:50:00.000+09:00')
     }
   },
   {
@@ -62,24 +68,28 @@ export const NotificationData : NotificationHeader[] = [
       iconStoreUrl:BarberLogo,
       photoUrl:BarberLogo,
       token:'',
-      role:'OWNER'
+      role:'OWNER',
+      status: 1,
+      createAt: new Date('2020-10-30T19:50:00.000+09:00')
     }
   },
-  // {
-  //   id : '5',
-  //   action: 'join to system',
-  //   time: '6 min ago',
-  //   user: {
-  //     id: '5',
-  //     displayName: 'Bi & Ti Barber',
-  //     email:'',
-  //     phone:'',
-  //     iconStoreUrl:BiTiLogo,
-  //     photoUrl:BiTiLogo,
-  //     token:'',
-  //     role:'OWNER'
-  //   }
-  // },
+  {
+    id : '5',
+    action: 'join to system',
+    time: '6 min ago',
+    user: {
+      id: '5',
+      displayName: 'Bi & Ti Barber',
+      email:'',
+      phone:'',
+      iconStoreUrl:BiTiLogo,
+      photoUrl:BiTiLogo,
+      token:'',
+      role:'OWNER',
+      status: 1,
+      createAt: new Date('2020-10-30T19:50:00.000+09:00')
+    }
+  },
   // {
   //   id : '6',
   //   action: 'join to system',

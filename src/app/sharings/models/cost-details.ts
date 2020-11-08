@@ -20,8 +20,8 @@ export interface CostDetails {
     costType: CostType;
     costDescription: string;
     total: number;
-    createAt: string;
-    updateAt: string;
+    createAt: Date;
+    updateAt: Date;
     // public constructor(OrderId: string, CostDescription: string, Total: number, CostCode: string) {
     //     this.costId = OrderId;
     //     this.costDescription = CostDescription;
