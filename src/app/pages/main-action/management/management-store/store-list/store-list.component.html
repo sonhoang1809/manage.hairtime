@@ -1,3 +1,71 @@
-<p>
-  store-list works!
-</p>
+<div class="row">
+  <!-- Cost list  -->
+  <!-- ============================================================== -->
+  <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+    <mat-card class="card">
+      <mat-card-header class="product-sidebar-widget">
+        <mat-card-title>Store List</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-body p-0">
+        <div class="table-responsive">
+          <table mat-table [dataSource]="dataSource" matSort class="table">
+            <ng-container matColumnDef="No.">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element;">
+                {{dataSource.filteredData.indexOf(element) + 1}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="Img">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let element">
+                <div class="m-r-10">
+                  <img src="{{element.brand.iconUrl}}" alt="user" class="rounded" width="55" height="55">
+                </div>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name Store </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="owner">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner Store </th>
+              <td mat-cell *matCellDef="let element"> {{element.owner.displayName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="createAt">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Create At </th>
+              <td mat-cell *matCellDef="let element"> {{element.createAt.toDateString()}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Details">
+              <th mat-header-cell *matHeaderCellDef> </th>
+              <td mat-cell *matCellDef="let element">
+                <button class="btn-outline-light" [routerLink]="['../store-details/'+element.id]" mat-raised-button>
+                  Details
+                </button>
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <button class="btn-outline-light" (click)='viewDetails(null);' mat-raised-button>
+            Insert
+          </button>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+
+  </div>
+  <!-- filter search  -->
+  <!-- ============================================================== -->
+  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">
+    <app-store-list-filter></app-store-list-filter>
+  </div>
+  <br>
+  <!-- ============================================================== -->
+  <!-- end recent orders  -->
+</div>

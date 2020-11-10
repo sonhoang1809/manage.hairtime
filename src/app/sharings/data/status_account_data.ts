@@ -13,7 +13,7 @@ export const WorkingAccount: StatusAccount = {
 
 export const DisableAccount: StatusAccount = {
   id: 2,
-  name: 'Store Staff'
+  name: 'Disable'
 };
 
 

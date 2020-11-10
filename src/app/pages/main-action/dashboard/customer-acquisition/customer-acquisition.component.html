@@ -1,0 +1,10 @@
+<mat-card class="card">
+  <h4 class="card-header">Customer Acquisition</h4>
+  <mat-card-content>
+    <canvas height="550vw" baseChart [datasets]="lineChart.chartData" [labels]="lineChart.chartLabels"
+      [options]="lineChart.chartOptions" [colors]="lineChart.chartColors"
+      [legend]="lineChart.chartLegend" [chartType]="lineChart.chartType"
+      [plugins]="lineChart.chartPlugins">
+    </canvas>
+  </mat-card-content>
+</mat-card>

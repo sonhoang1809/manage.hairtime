@@ -1,3 +1,4 @@
+import { StoreDetailsComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details.component';
 import { StoreListComponent } from './../pages/main-action/management/management-store/store-list/store-list.component';
 import { AccountListComponent } from './../pages/main-action/management/management-account/account-list/account-list.component';
 import { BookingChartComponent } from './../pages/main-action/management/management-booking/booking-chart/booking-chart.component';
@@ -59,6 +60,7 @@ export const ROUTER = RouterModule.forRoot([
         path: 'management-store', component: ManagementStoreComponent, children: [
           { path: '', redirectTo: 'store-list', pathMatch: 'prefix' },
           { path: 'store-list', component: StoreListComponent },
+          { path: 'store-details/:storeId', component: StoreDetailsComponent },
           //{ path: 'account-chart', component: AccountChartComponent},
         ]
       },

@@ -1,4 +1,4 @@
-import { Salon430ShineCN01, AimShaverBarber, CN1FourRauBarber, VintageStore01, GentlemanStore01 } from './stores_data';
+import { AimShaverBarber, CN1FourRauBarber, VintageStore01, GentlemanStore01 } from './stores_data';
 import { PerformStore } from './../models/perform_store';
 
 // export const PerformSalon430ShineCN01: PerformStore = {

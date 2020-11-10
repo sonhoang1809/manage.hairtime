@@ -1,3 +1,8 @@
+import { StoreStaffListComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-campaign/store-staff-list/store-staff-list.component';
+import { StoreDetailsCampaignComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-campaign/store-details-campaign.component';
+import { StoreDetailsContactInformationComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-contact-information/store-details-contact-information.component';
+import { CustomerAcquisitionComponent } from './../pages/main-action/dashboard/customer-acquisition/customer-acquisition.component';
+import { RecentServiceBookingsComponent } from './../pages/main-action/dashboard/recent-service-bookings/recent-service-bookings.component';
 import { AccountDetailsUpdateComponent } from './../pages/main-action/management/management-account/account-list/account-details-update/account-details-update.component';
 import { StoreListFilterComponent } from './../pages/main-action/management/management-store/store-list/store-list-filter/store-list-filter.component';
 import { StoreDetailsComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details.component';
@@ -75,6 +80,8 @@ export const DECLARATIONS = [
     SummaryProfitInMonthComponent,
     SummaryNumberOfBookingsInMonthComponent,
     RecentBookingsComponent,
+    RecentServiceBookingsComponent,
+    CustomerAcquisitionComponent,
     RecentCostComponent,
     TopPerformingStoreComponent,
     SummaryNumberOfGuestComponent,
@@ -112,4 +119,7 @@ export const DECLARATIONS = [
     StoreListComponent,
     StoreDetailsComponent,
     StoreListFilterComponent,
+    StoreDetailsContactInformationComponent,
+    StoreDetailsCampaignComponent,
+    StoreStaffListComponent
 ];

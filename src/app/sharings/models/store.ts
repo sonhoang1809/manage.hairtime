@@ -11,7 +11,7 @@ export interface Store{
   numberOfSeat: number;
   services: CustomerService[];
   owner: Account;
-  createAt: string;
+  createAt: Date;
   status: number;//0: not accept by admin, 1: working; 2: stop working
 }
 
@@ -25,5 +25,7 @@ export interface CustomerService{
   id: number;
   name: string;
   iconUrl: string;
-  price: number
+  price: number;
+  quantity: number;
+  total: number;
 }

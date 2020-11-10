@@ -1,0 +1,27 @@
+<mat-card class="card">
+  <h4 class="card-header">Recent Booking Services</h4>
+  <mat-card-content class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="bg-light">
+          <tr class="border-0">
+            <th class="border-0">#</th>
+            <th class="border-0"></th>
+            <th class="border-0">Service</th>
+            <th class="border-0">Checkout</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let recentServiceBooking of recentServiceBookings;index as i">
+            <td>{{i+1}}</td>
+            <td> {{recentServiceBooking.costDescription}} </td>
+            <td>{{recentServiceBooking.total | currency: CurrencyUnit}}</td>
+          </tr>
+          <tr>
+            <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View More</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

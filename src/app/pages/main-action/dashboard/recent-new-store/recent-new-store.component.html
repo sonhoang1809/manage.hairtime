@@ -21,7 +21,7 @@
             </td>
             <td> {{store.name}} </td>
             <td>{{store.owner.displayName}}</td>
-            <td>{{store.createAt}}</td>
+            <td>{{store.createAt.toDateString()}}</td>
             <td>
               <ng-template [ngIf]="store.status==0">
                 <span class="badge-dot badge-brand mr-1"></span>Not verify yet
@@ -35,7 +35,7 @@
             </td>
           </tr>
           <tr>
-            <td colspan="9"><a [routerLink]='[""]' class="btn btn-outline-light float-right">View More</a></td>
+            <td colspan="9"><a [routerLink]='["../management-store"]' class="btn btn-outline-light float-right">View More</a></td>
           </tr>
         </tbody>
       </table>

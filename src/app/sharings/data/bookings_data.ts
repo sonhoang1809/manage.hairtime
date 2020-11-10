@@ -1,5 +1,5 @@
 import { ManHairCutService, ManHairWaxService, ShampooService } from './customer_services_data';
-import { Salon430ShineCN01, CN1FourRauBarber, AimShaverBarber, GentlemanStore01, GudStore01, VintageStore01, BaberNormalStore01, BiTyStore01 } from './stores_data';
+import { CN1FourRauBarber, AimShaverBarber, GentlemanStore01, GudStore01, VintageStore01, BaberNormalStore01, BiTyStore01 } from './stores_data';
 import { Customer01, Customer02, Customer03, Guest01, Guest02, Guest03, Customer04 } from './users_data';
 import { Booking } from './../models/booking';
 
@@ -15,8 +15,8 @@ export const BookingsData: Booking[] = [
       ManHairWaxService
     ],
     status: 0,
-    totalPrice: 80000,
-    discount: 20000
+    totalPrice: 8,
+    discount: 2
   },
   {
     id: 2,
@@ -30,8 +30,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 1,
-    totalPrice: 120000,
-    discount: 30000
+    totalPrice: 12,
+    discount: 3
   },
   {
     id: 3,
@@ -45,8 +45,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 2,
-    totalPrice: 120000,
-    discount: 30000
+    totalPrice: 12,
+    discount: 3
   },
   {
     id: 4,
@@ -60,8 +60,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 1,
-    totalPrice: 120000,
-    discount: 30000
+    totalPrice: 12,
+    discount: 3
   },
   {
     id: 5,
@@ -75,8 +75,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 3,
-    totalPrice: 500000,
-    discount: 50000
+    totalPrice: 5,
+    discount: 1
   },
   {
     id: 6,
@@ -90,8 +90,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 2,
-    totalPrice: 500000,
-    discount: 30000
+    totalPrice: 5,
+    discount: 3
   },
   {
     id: 7,
@@ -105,8 +105,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 2,
-    totalPrice: 500000,
-    discount: 30000
+    totalPrice: 5,
+    discount: 1
   },
   {
     id: 8,
@@ -120,8 +120,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 2,
-    totalPrice: 500000,
-    discount: 30000
+    totalPrice: 5,
+    discount: 2
   },
   {
     id: 9,
@@ -135,8 +135,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 2,
-    totalPrice: 500000,
-    discount: 50000
+    totalPrice: 5,
+    discount: 1
   },
   {
     id: 10,
@@ -150,8 +150,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 3,
-    totalPrice: 500000,
-    discount: 30000
+    totalPrice: 5,
+    discount: 1
   },
   {
     id: 11,
@@ -165,8 +165,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 3,
-    totalPrice: 500000,
-    discount: 30000
+    totalPrice: 5,
+    discount: 2
   },
   {
     id: 12,
@@ -180,8 +180,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 3,
-    totalPrice: 500000,
-    discount: 20000
+    totalPrice: 5,
+    discount: 2
   },
   {
     id: 13,
@@ -195,8 +195,8 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 3,
-    totalPrice: 500000,
-    discount: 50000
+    totalPrice: 5,
+    discount: 1
   },
   {
     id: 14,
@@ -210,7 +210,7 @@ export const BookingsData: Booking[] = [
       ShampooService
     ],
     status: 3,
-    totalPrice: 500000,
-    discount: 50000
+    totalPrice: 5,
+    discount: 1
   }
 ]

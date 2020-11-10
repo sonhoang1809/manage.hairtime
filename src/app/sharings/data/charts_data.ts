@@ -209,3 +209,24 @@ export const statisticsBys = [
   { id: 0, display: 'Daily' },
   { id: 1, display: 'Monthly' }
 ];
+
+
+export const CustomerAcquisition: LineChartDataModel = {
+  dataSets: [
+    {
+      data: [
+        10, 5, 12
+      ],
+      label: "Customer acquisition"
+    },
+    {
+      data: [
+        4, 7, 15
+      ],
+      label: "New customer"
+    }
+  ],
+  chartLabel: [
+   '10-11', '11-11', '12-11'
+  ]
+};

@@ -45,10 +45,7 @@ export class StatisticsComponent implements OnInit {
   ngOnInit() {
     switch (this.data) {
       case "RevenueChart": {
-        console.log("draw revenue CHart");
         this.setIsLineChart();
-        console.log("isLineChart: " + this.isLineChart);
-        console.log("isBarChart: " + this.isBarChart);
         this.titleChart = "Revenue Chart";
         this.drawChartRevenue(0);
         break;

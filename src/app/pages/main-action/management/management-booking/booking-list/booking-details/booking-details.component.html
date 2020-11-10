@@ -33,7 +33,7 @@
       <div>Phone: {{bookingDetails.customer.phone}}</div>
     </div>
   </div>
-  <mat-dialog-content class="row mb-4" *ngIf="bookingDetails.status!=3">
+  <!-- <mat-dialog-content class="row mb-4" *ngIf="bookingDetails.status!=3">
     <mat-horizontal-stepper [linear]="true" #stepper>
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
@@ -58,7 +58,7 @@
         <p>Customer was checkout</p>
       </mat-step>
     </mat-horizontal-stepper>
-  </mat-dialog-content>
+  </mat-dialog-content> -->
   <div class="table-responsive-sm">
     <table class="table">
       <thead>
@@ -67,7 +67,8 @@
           <th style="font-family: 'Montserrat', sans-serif;"></th>
           <th style="font-family: 'Montserrat', sans-serif;">Service</th>
           <th class="right" style="font-family: 'Montserrat', sans-serif;">Price</th>
-          <th class="right" style="font-family: 'Montserrat', sans-serif;"></th>
+          <th class="right" style="font-family: 'Montserrat', sans-serif;">Quantity</th>
+          <th class="right" style="font-family: 'Montserrat', sans-serif;">Total</th>
         </tr>
       </thead>
       <tbody>
@@ -80,26 +81,30 @@
           </td>
           <td class="left">{{service.name}}</td>
           <td>{{service.price | currency:'USD'}}</td>
+          <td>{{service.quantity}}</td>
+          <td class="left strong">{{service.total | currency:'USD'}}</td>
         </tr>
         <tr>
-          <td colspan="2"></td>
+          <td colspan="4"></td>
           <td><strong class="text-dark">Total</strong></td>
           <td>
-            <strong class="text-dark">{{total|currency:CurrencyUnit}}</strong>
+            <strong class="text-dark">{{total | currency:CurrencyUnit}}</strong>
           </td>
         </tr>
         <tr>
-          <td colspan="2"></td>
-          <td><strong class="text-dark">Discount</strong></td>
+          <td colspan="4"></td>
           <td>
-            <strong class="text-dark">{{bookingDetails.discount|currency:CurrencyUnit}}</strong>
+            <strong class="text-dark">Discount</strong>
+          </td>
+          <td>
+            <strong class="text-dark">{{bookingDetails.discount | currency:CurrencyUnit}}</strong>
           </td>
         </tr>
         <tr>
-          <td colspan="2"></td>
+          <td colspan="4"></td>
           <td><strong class="text-dark">Total After Discount</strong></td>
           <td>
-            <strong class="text-dark">{{bookingDetails.totalPrice|currency:CurrencyUnit}}</strong>
+            <strong class="text-dark">{{total - bookingDetails.discount | currency:CurrencyUnit}}</strong>
           </td>
         </tr>
       </tbody>

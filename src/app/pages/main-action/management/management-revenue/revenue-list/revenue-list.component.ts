@@ -1,3 +1,5 @@
+import { Revenues } from './../../../../../sharings/data/revenues_data';
+import { Revenue } from './../../../../../sharings/models/revenue';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
@@ -14,17 +16,18 @@ import { RevenueDetailsComponent } from './revenue-details/revenue-details.compo
   templateUrl: './revenue-list.component.html',
   styleUrls: ['./revenue-list.component.css']
 })
-export class RevenueListComponent implements OnInit, AfterViewInit  {
+export class RevenueListComponent implements OnInit, AfterViewInit {
   CurrencyUnit = CurrencyUnit;
-  costDetails: CostDetails[] = CostsData;
-  displayedColumns: string[] = ['No.', 'costDescription', 'total', 'Details'];
-  dataSource: MatTableDataSource<CostDetails>;
+  revenues: Revenue[] = Revenues;
+  displayedColumns: string[] = ['No.', 'description', 'total', 'Details'];
+  dataSource: MatTableDataSource<Revenue>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   constructor(private dialog: MatDialog,
     public generalHelper: GeneralHelperService) { }
 
   ngOnInit() {
+    this.dataSource = new MatTableDataSource<Revenue>(this.revenues);
   }
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -34,7 +37,7 @@ export class RevenueListComponent implements OnInit, AfterViewInit  {
     const dialogRef = this.dialog.open<RevenueDetailsComponent>(RevenueDetailsComponent, {
       panelClass: 'myapp-no-padding-dialog',
       width: '600px',
-      height:'440px',
+      height: '440px',
       position: { top: '70px' },
       data: data
     });

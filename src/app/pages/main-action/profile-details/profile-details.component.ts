@@ -15,7 +15,22 @@ export class ProfileDetailsComponent implements OnInit {
 
   ngOnInit() {
     console.log('Init Profile');
-    this.account = this.authService.getAccount();
+    if(this.authService.getAccount() == null){
+      this.account = {
+        id: '3192014117691615',
+        displayName: "Hoàng Sơn",
+        email: "sonhoang1809@gmail.com",
+        phone: '0123456789',
+        photoUrl: "https://graph.facebook.com/3192014117691615/picture?type=normal",
+        role: 'ADMIN',
+        token: '',
+        status: 1,
+        createAt: new Date('2020-10-30T19:50:00.000+09:00')
+      };
+    }else{
+      this.account = this.authService.getAccount();
+    }
+
     this.account.phone = "0789008130";
   }
 
