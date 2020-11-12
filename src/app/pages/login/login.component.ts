@@ -1,3 +1,4 @@
+import { ForgotPasswordInputEmailComponent } from './forgot-password-input-email/forgot-password-input-email.component';
 import { GeneralHelperService } from './../../services/general-helper.service';
 import { AuthService } from './../../services/auth-service/auth.service';
 import { SummaryService } from './../../services/summary.service';
@@ -38,10 +39,13 @@ export class LoginComponent implements OnInit {
     private socialAuthService: SocialAuthService,
     private generalService: GeneralHelperService,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer) {
-    // this.matIconRegistry.addSvgIcon("Google-logo", this.domSanitizer.bypassSecurityTrustResourceUrl(this.googleLogoURL));
-    // this.matIconRegistry.addSvgIcon("Facebook-logo",this.domSanitizer.bypassSecurityTrustResourceUrl(this.facebookLogoURL));
+    private domSanitizer: DomSanitizer) { };
 
-  };
+  onForgotPassword() {
+    this.router.navigate(['forgot-password']);
+  }
 
+  onLogin() {
+    this.router.navigate(['main']);
+  }
 }

@@ -1,3 +1,10 @@
+import { ForgotPasswordResetPasswordComponent } from './../pages/login/forgot-password-reset-password/forgot-password-reset-password.component';
+import { ForgotPasswordInputVerifyCodeComponent } from './../pages/login/forgot-password-input-verify-code/forgot-password-input-verify-code.component';
+import { ForgotPasswordInputEmailComponent } from './../pages/login/forgot-password-input-email/forgot-password-input-email.component';
+import { DialogReasonDisableAccountComponent } from './../pages/main-action/management/management-account/account-list/account-details/dialog-reason-disable-account/dialog-reason-disable-account.component';
+import { StoreBookingListComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-campaign/store-summary-information/store-booking-list/store-booking-list.component';
+import { StoreSummaryInformationComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-campaign/store-summary-information/store-summary-information.component';
+import { StoreReviewListComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-campaign/store-review-list/store-review-list.component';
 import { StoreStaffListComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-campaign/store-staff-list/store-staff-list.component';
 import { StoreDetailsCampaignComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-campaign/store-details-campaign.component';
 import { StoreDetailsContactInformationComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details-contact-information/store-details-contact-information.component';
@@ -121,5 +128,12 @@ export const DECLARATIONS = [
     StoreListFilterComponent,
     StoreDetailsContactInformationComponent,
     StoreDetailsCampaignComponent,
-    StoreStaffListComponent
+    StoreStaffListComponent,
+    StoreReviewListComponent,
+    StoreSummaryInformationComponent,
+    StoreBookingListComponent,
+    DialogReasonDisableAccountComponent,
+    ForgotPasswordInputEmailComponent,
+    ForgotPasswordInputVerifyCodeComponent,
+    ForgotPasswordResetPasswordComponent
 ];

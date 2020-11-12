@@ -1,3 +1,4 @@
+import { DialogReasonDisableAccountComponent } from './dialog-reason-disable-account/dialog-reason-disable-account.component';
 import { StatusAccounts } from './../../../../../../sharings/data/status_account_data';
 import { Roles, AdminRole } from './../../../../../../sharings/data/roles_data';
 import { Account, Role, StatusAccount } from './../../../../../../sharings/models/account';
@@ -73,7 +74,7 @@ export class AccountDetailsComponent implements OnInit {
       });
     }
   }
-  onUpdateProduct(data, id: string) {
+  onUpdate(data, id: string) {
     this.dialogRef.close();
     //console.log(data);
     // if (this.inputFormControl.valid) {
@@ -112,5 +113,16 @@ export class AccountDetailsComponent implements OnInit {
       // );
     }
   }
-
+  onChangeStatusAccount(data){
+    console.log(data.value);
+    if(data.value == 2){
+      this.dialog.open<DialogReasonDisableAccountComponent>(DialogReasonDisableAccountComponent, {
+        panelClass: 'myapp-no-padding-dialog',
+        width: '300px',
+        height:'300px',
+        //position: { top: '70px' },
+        data: data
+      });
+    }
+  }
 }

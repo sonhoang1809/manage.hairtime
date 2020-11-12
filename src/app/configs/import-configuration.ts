@@ -1,3 +1,5 @@
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { LineChartModule } from './../sharings/modules/charts/line-chart/line-chart.module';
 import { BarChartModule } from './../sharings/modules/charts/bar-chart/bar-chart.module';
@@ -61,6 +63,8 @@ export const IMPORTS = [
   MatExpansionModule,
   MatSnackBarModule,
   MatStepperModule,
+  MatChipsModule,
+  MatAutocompleteModule,
   BarChartModule,
   LineChartModule,
   PieChartModule,

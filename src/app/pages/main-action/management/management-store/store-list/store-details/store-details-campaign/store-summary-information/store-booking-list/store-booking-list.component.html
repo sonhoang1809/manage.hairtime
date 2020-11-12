@@ -1,0 +1,75 @@
+<div class="section-block">
+  <h3 class="section-title">Appointment List</h3>
+</div>
+<div class="card" *ngFor="let bookingsData of bookingsDatas">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="media influencer-profile-data d-flex align-items-center p-2">
+          <div class="mr-4">
+            <img src="{{bookingsData.customer.photoUrl}}" alt="User Avatar" class="user-avatar-lg">
+          </div>
+          <div class="media-body ">
+            <div class="influencer-profile-data">
+              <h3 class="m-b-10">{{bookingsData.customer.displayName}} booking</h3>
+              <p>
+                <span class="m-r-20 d-inline-block">Booking At
+                  <span class="m-l-10 text-primary">{{bookingsData.bookingAt.toDateString()}}</span>
+                </span>
+              </p>
+              <p>
+                <span class="m-r-20 d-inline-block">Status
+                  <span class="m-l-10 text-primary">
+                    <ng-template [ngIf]="bookingsData.status==0">
+                      <span class="badge-dot badge-brand mr-1"></span>Booked
+                    </ng-template>
+                    <ng-template [ngIf]="bookingsData.status==1">
+                      <span class="badge-dot badge-primary mr-1"></span>Verified
+                    </ng-template>
+                    <ng-template [ngIf]="bookingsData.status==2">
+                      <span class="badge-dot badge-success mr-1"></span>Checkout
+                    </ng-template>
+                    <ng-template [ngIf]="bookingsData.status==3">
+                      <span class="badge-dot badge-danger mr-1"></span>Cancel
+                    </ng-template>
+                  </span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-top card-footer p-0">
+    <div class="campaign-metrics d-xl-inline-block" *ngFor="let serviceBooking of bookingsData.serviceBookings">
+      <h4 class="mb-0">{{serviceBooking.name}}</h4>
+      <!-- <p>Total Reach</p> -->
+    </div>
+    <!-- <div class="campaign-metrics d-xl-inline-block">
+      <h4 class="mb-0">29k</h4>
+      <p>Total Views</p>
+    </div>
+    <div class="campaign-metrics d-xl-inline-block">
+      <h4 class="mb-0">5k</h4>
+      <p>Total Click</p>
+    </div>
+    <div class="campaign-metrics d-xl-inline-block">
+      <h4 class="mb-0">4k</h4>
+      <p>Engagement</p>
+    </div>
+    <div class="campaign-metrics d-xl-inline-block">
+      <h4 class="mb-0">2k</h4>
+      <p>Conversion</p>
+    </div> -->
+  </div>
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link " href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>

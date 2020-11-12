@@ -8,7 +8,7 @@
     </div>
   </form>
   <form *ngIf="inputFormControl!=null; elseNull" [formGroup]="inputFormControl"
-    (ngSubmit)="onUpdateProduct(inputFormControl.value,data.id);">
+    (ngSubmit)="onUpdate(inputFormControl.value,data.id);">
     <div class="card-body">
       <div class="row">
         <mat-form-field appearance="outline" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -73,7 +73,7 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
           <mat-label>Status Account</mat-label>
-          <mat-select formControlName="status" required [(value)]="statusAccountSelected">
+          <mat-select formControlName="status" (selectionChange)="onChangeStatusAccount($event)"  required [(value)]="statusAccountSelected">
             <mat-option *ngFor="let statusAccount of statusAccounts" [value]="statusAccount.id">
               {{statusAccount.name}}
             </mat-option>
@@ -95,7 +95,7 @@
 </div>
 <ng-template class="card" #elseBlock>
   <h3 class="card-header">Add Account</h3>
-  <form [formGroup]="inputFormControl" (ngSubmit)="onUpdateProduct(null);">
+  <form [formGroup]="inputFormControl" (ngSubmit)="onUpdate(null);">
     <div class="card-body">
       <div class="row">
         <mat-form-field appearance="outline" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -160,7 +160,7 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
           <mat-label>Status Account</mat-label>
-          <mat-select formControlName="status" required [(value)]="statusAccountSelected">
+          <mat-select formControlName="status" (selectionChange)="onChangeStatusAccount($event)" required [(value)]="statusAccountSelected">
             <mat-option *ngFor="let statusAccount of statusAccounts" [value]="statusAccount.id">
               {{statusAccount.name}}
             </mat-option>

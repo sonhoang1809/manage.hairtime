@@ -1,3 +1,7 @@
+import { AccountDetailsComponent } from './../pages/main-action/management/management-account/account-list/account-details/account-details.component';
+import { ForgotPasswordResetPasswordComponent } from './../pages/login/forgot-password-reset-password/forgot-password-reset-password.component';
+import { ForgotPasswordInputVerifyCodeComponent } from './../pages/login/forgot-password-input-verify-code/forgot-password-input-verify-code.component';
+import { ForgotPasswordInputEmailComponent } from './../pages/login/forgot-password-input-email/forgot-password-input-email.component';
 import { StoreDetailsComponent } from './../pages/main-action/management/management-store/store-list/store-details/store-details.component';
 import { StoreListComponent } from './../pages/main-action/management/management-store/store-list/store-list.component';
 import { AccountListComponent } from './../pages/main-action/management/management-account/account-list/account-list.component';
@@ -23,6 +27,9 @@ export const ROUTER = RouterModule.forRoot([
 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'forgot-password', component: ForgotPasswordInputEmailComponent },
+  { path: 'verify-code', component: ForgotPasswordInputVerifyCodeComponent },
+  { path: 'reset-password', component: ForgotPasswordResetPasswordComponent },
   {
     path: 'main', component: MainActionComponent, children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -39,7 +46,7 @@ export const ROUTER = RouterModule.forRoot([
         path: 'management-account', component: ManagementAccountComponent, children: [
           { path: '', redirectTo: 'account-list', pathMatch: 'prefix' },
           { path: 'account-list', component: AccountListComponent },
-          //{ path: 'account-chart', component: AccountChartComponent},
+          { path: 'account-details/:accountId', component: AccountDetailsComponent },
         ]
       },
       {

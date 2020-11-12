@@ -62,7 +62,7 @@ export const OwnerAimShaverBarber: Account = {
 };
 export const OwnerFourRauBarber: Account = {
   id: '4',
-  displayName: 'Hà Hiền',
+  displayName: 'Ha Hien',
   email: '4raubarbershop@gmail.com',
   phone: '0933945339',
   photoUrl: Avatar4RauOwner,
@@ -215,6 +215,50 @@ export const Guest03: Account = {
   status: 1,
   createAt: new Date('2020-10-30T19:50:00.000+09:00')
 };
+export const Staff01: Account = {
+  id: '31',
+  displayName: 'Le Hieu',
+  email: '',
+  phone: '0123456789',
+  photoUrl: DefaultAvatar,
+  role: 'STAFF',
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-30T19:50:00.000+09:00')
+};
+export const Staff02: Account = {
+  id: '32',
+  displayName: 'Nguyen Dinh Cam',
+  email: '',
+  phone: '0123456789',
+  photoUrl: DefaultAvatar,
+  role: 'STAFF',
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-20T19:50:00.000+09:00')
+};
+export const Staff03: Account = {
+  id: '33',
+  displayName: 'Nguyen Quoc Hau',
+  email: '',
+  phone: '0123456789',
+  photoUrl: DefaultAvatar,
+  role: 'STAFF',
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-19T19:50:00.000+09:00')
+};
+export const Staff04: Account = {
+  id: '34',
+  displayName: 'Nguyen Quoc Bao',
+  email: '',
+  phone: '0123456789',
+  photoUrl: DefaultAvatar,
+  role: 'STAFF',
+  token: '',
+  status: 1,
+  createAt: new Date('2020-10-18T19:50:00.000+09:00')
+};
 export const AccountUsers: Account[] = [
   Admin01, Admin02,
   OwnerBityBarber,
@@ -223,4 +267,8 @@ export const AccountUsers: Account[] = [
   OwnerGudStore01, OwnerNormalStore01,
   Customer01, Customer02, Customer03, Customer04,
   Customer05, Customer06
+];
+export const StoreStaffUser: Account[] = [
+  OwnerFourRauBarber,
+  Staff01, Staff02, Staff03, Staff04
 ];

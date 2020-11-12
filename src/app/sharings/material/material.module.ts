@@ -15,9 +15,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   exports: [FormsModule, MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule,
     MatProgressSpinnerModule, MatSelectModule, MatIconModule, MatTableModule, MatPaginatorModule,
-    MatCheckboxModule, MatSidenavModule, MatExpansionModule, MatSnackBarModule, MatStepperModule]
+    MatCheckboxModule, MatSidenavModule, MatExpansionModule, MatSnackBarModule, MatStepperModule,
+    MatChipsModule, MatAutocompleteModule]
 })
 export class MaterialModule { }

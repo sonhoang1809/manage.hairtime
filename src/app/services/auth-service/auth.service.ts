@@ -102,17 +102,32 @@ export class AuthService {
   login() {
     this.isLoginUser = true;
     this.generalService.openWaitingPopup();
-    this.account = {
-      id:this.user.id,
-      displayName:this.user.name,
-      email: this.user.email,
-      photoUrl: this.user.photoUrl,
-      phone: null,
-      token: this.user.authToken,
-      role: 'ADMIN',
-      status: 1,
-      createAt: new Date('2020-10-30T19:50:00.000+09:00')
-    };
+    if (this.user != null) {
+      this.account = {
+        id: this.user.id,
+        displayName: this.user.name,
+        email: this.user.email,
+        photoUrl: this.user.photoUrl,
+        phone: null,
+        token: this.user.authToken,
+        role: 'ADMIN',
+        status: 1,
+        createAt: new Date('2020-10-30T19:50:00.000+09:00')
+      };
+    } else {
+      this.account = {
+        id: '3192014117691615',
+        displayName: "Hoang Son",
+        email: "sonhoang1809@gmail.com",
+        phone: '0123456789',
+        photoUrl: "https://graph.facebook.com/3192014117691615/picture?type=normal",
+        role: 'ADMIN',
+        token: '',
+        status: 1,
+        createAt: new Date('2020-10-30T19:50:00.000+09:00')
+      };
+    }
+
     this.storage.storage.set("UserAccount", this.account);
     setTimeout(
       () => {
