@@ -4,4 +4,6 @@ export interface NotificationHeader{
   user: AccountStoreOwner;
   action: string;
   time: string;
+  url: string;
+  queryParam: any;
 }

@@ -20,7 +20,11 @@
               <div class="notification-title"> Notification</div>
               <div class="notification-list">
                 <div class="list-group scroll-space">
-                  <a href="#" class="list-group-item list-group-item-action" *ngFor="let notification of notifications">
+                  <div>
+
+                  </div>
+                  <a *ngFor="let notification of notifications" [routerLink]='[notification.url]'
+                    [queryParams]="notification.queryParam" class="list-group-item list-group-item-action">
                     <div class="notification-info">
                       <div class="notification-list-user-img">
                         <img src="{{notification.user.iconStoreUrl}}" alt="" class="user-avatar-md rounded-circle">

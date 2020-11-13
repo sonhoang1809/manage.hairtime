@@ -18,7 +18,7 @@ export class DialogReasonDisableAccountComponent implements OnInit {
   reasonCtrl = new FormControl();
   filteredReasons: Observable<string[]>;
   selectedReasons: string[] = [];
-  allReasons: string[] = ['Spam', 'Usually booking but not come','Bad behavior'];
+  allReasons: string[] = ['Spam', 'Usually make appointment but not come','Bad behavior'];
   @ViewChild('reasonInput') reasonInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
 

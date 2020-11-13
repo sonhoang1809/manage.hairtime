@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-store-details-campaign',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreDetailsCampaignComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, @Inject(DOCUMENT) document) { }
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['viewReport'] == 'true') {
+        console.log(params['viewReport']);
+        document.getElementById('pills-summary-tab').classList.remove('active');
+        document.getElementById('pills-summary').classList.remove('show', 'active');
+        document.getElementById('pills-review-tab').classList.add('active');
+        document.getElementById('pills-review').classList.add('show', 'active');
+      }
+    });
   }
 
 }

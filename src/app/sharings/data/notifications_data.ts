@@ -1,91 +1,84 @@
-import { ShineLogo, FourRauLogo, AimShaverLogo,
+import {
+  ShineLogo, FourRauLogo, AimShaverLogo,
   BarberLogo, BiTiLogo, GudLogo, GentlemanLogo,
-  LongLogo, SkyBarberLogo, VintageLogo, WhitefishLogo } from './../assets/shop_logo';
+  LongLogo, SkyBarberLogo, VintageLogo, WhitefishLogo
+} from './../assets/shop_logo';
 import { NotificationHeader } from './../models/notification';
 
 
-export const NotificationData : NotificationHeader[] = [
-  // {
-  //   id : '1',
-  //   action: 'join to system',
-  //   time: '2 min ago',
-  //   user: {
-  //     id: '1',
-  //     displayName: '30Shine',
-  //     email:'30shine@gmail.com',
-  //     phone:'',
-  //     iconStoreUrl:ShineLogo,
-  //     photoUrl:ShineLogo,
-  //     token:'',
-  //     role:'OWNER',
-  //     status: 1,
-  //     createAt: new Date('2020-10-30T19:50:00.000+09:00')
-  //   }
-  // },
+export const NotificationData: NotificationHeader[] = [
   {
-    id : '2',
-    action: 'join to system',
+    id: '2',
+    action: 'report a customer has bad behaviors',
     time: '3 min ago',
+    url: '../main/management-account/account-details/3192014117691615',
+    queryParam: { viewReport: true },
     user: {
       id: '2',
       displayName: '4Rau Barber',
-      email:'',
-      phone:'',
-      iconStoreUrl:FourRauLogo,
-      photoUrl:FourRauLogo,
-      token:'',
-      role:'OWNER',
+      email: '',
+      phone: '',
+      iconStoreUrl: FourRauLogo,
+      photoUrl: FourRauLogo,
+      token: '',
+      role: 'OWNER',
       status: 1,
       createAt: new Date('2020-10-30T19:50:00.000+09:00')
     }
   },
   {
-    id : '3',
+    id: '3',
     action: 'join to system',
     time: '4 min ago',
+    url: '../main/management-store/store-details/2',
+    queryParam: null,
     user: {
       id: '3',
       displayName: 'Aim Shaver Shop',
-      email:'',
-      phone:'',
-      iconStoreUrl:AimShaverLogo,
-      photoUrl:AimShaverLogo,
-      token:'',
-      role:'OWNER',
+      email: '',
+      phone: '',
+      iconStoreUrl: AimShaverLogo,
+      photoUrl: AimShaverLogo,
+      token: '',
+      role: 'OWNER',
       status: 1,
       createAt: new Date('2020-10-30T19:50:00.000+09:00')
     }
   },
   {
-    id : '4',
+    id: '4',
     action: 'join to system',
     time: '5 min ago',
+    url: '../main/management-store/store-details/4',
+    queryParam: null,
     user: {
       id: '4',
       displayName: 'Barber shop',
-      email:'',
-      phone:'',
-      iconStoreUrl:BarberLogo,
-      photoUrl:BarberLogo,
-      token:'',
-      role:'OWNER',
+      email: '',
+      phone: '',
+      iconStoreUrl: BarberLogo,
+      photoUrl: BarberLogo,
+      token: '',
+      role: 'OWNER',
       status: 1,
       createAt: new Date('2020-10-30T19:50:00.000+09:00')
     }
   },
   {
-    id : '5',
+    id: '5',
     action: 'join to system',
     time: '6 min ago',
+    url: '../main/management-store/store-details/5',
+    queryParam: { viewReport: true },
     user: {
       id: '5',
       displayName: 'Bi & Ti Barber',
-      email:'',
-      phone:'',
-      iconStoreUrl:BiTiLogo,
-      photoUrl:BiTiLogo,
-      token:'',
-      role:'OWNER',
+      email: '',
+      phone: '',
+      iconStoreUrl: BiTiLogo,
+      photoUrl: BiTiLogo,
+      token: '',
+      role: 'OWNER',
       status: 1,
       createAt: new Date('2020-10-30T19:50:00.000+09:00')
     }

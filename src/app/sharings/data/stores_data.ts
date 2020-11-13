@@ -61,7 +61,7 @@ export const CN2FourRauBarber: Store = {
   }]
 };
 export const AimShaverBarber: Store = {
-  id: 1,
+  id: 2,
   address: '6 Nguyen Van Linh, Q7, Tp. HCM',
   brand: AimShaverBrand,
   imgUrl: '',
@@ -116,7 +116,7 @@ export const AimShaverBarber: Store = {
   }]
 };
 export const CN1FourRauBarber: Store = {
-  id: 1,
+  id: 3,
   address: '634 Dien Bien Phu, Q1, Tp. HCM',
   brand: FourRauBrand,
   imgUrl: '',
@@ -171,7 +171,7 @@ export const CN1FourRauBarber: Store = {
   }]
 };
 export const BaberNormalStore01: Store = {
-  id: 1,
+  id: 4,
   address: '88 Phan Dang Giang,P. Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: BaberBrand,
   imgUrl: '',
@@ -226,7 +226,7 @@ export const BaberNormalStore01: Store = {
   }]
 };
 export const BiTyStore01: Store = {
-  id: 4,
+  id: 5,
   address: '2 Phan Dang Giang,P.Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: BiAndTyBrand,
   imgUrl: '',
@@ -281,7 +281,7 @@ export const BiTyStore01: Store = {
   }]
 };
 export const GudStore01: Store = {
-  id: 5,
+  id: 6,
   address: '7 Le Trong Tan,P. Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: GudBrand,
   imgUrl: '',
@@ -336,7 +336,7 @@ export const GudStore01: Store = {
   }]
 };
 export const GentlemanStore01: Store = {
-  id: 5,
+  id: 7,
   address: '9 Le Trong Tan,P. Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: GentlemanBrand,
   imgUrl: '',
@@ -391,7 +391,7 @@ export const GentlemanStore01: Store = {
   }]
 };
 export const VintageStore01: Store = {
-  id: 5,
+  id: 8,
   address: '35 Nguyễn Thị Tú,P. Bình Hưng Hòa, Q. Bình Tân, Tp. HCM',
   brand: VintageBrand,
   imgUrl: '',
