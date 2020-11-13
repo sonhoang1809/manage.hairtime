@@ -1,16 +1,17 @@
+import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { ENTER, COMMA } from "@angular/cdk/keycodes";
 import { MatAutocomplete, MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
-import { map, startWith } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { startWith, map } from 'rxjs/operators';
+
 @Component({
-  selector: 'app-dialog-reason-disable-account',
-  templateUrl: './dialog-reason-disable-account.component.html',
-  styleUrls: ['./dialog-reason-disable-account.component.css']
+  selector: 'app-send-message-disable-account',
+  templateUrl: './send-message-disable-account.component.html',
+  styleUrls: ['./send-message-disable-account.component.css']
 })
-export class DialogReasonDisableAccountComponent implements OnInit {
+export class SendMessageDisableAccountComponent implements OnInit {
   visible = true;
   selectable = true;
   removable = true;

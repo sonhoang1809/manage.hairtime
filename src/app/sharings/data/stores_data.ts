@@ -10,7 +10,7 @@ export const CN2FourRauBarber: Store = {
   address: '4 Tran Quang Khai, Quan 1, Tp. HCM',
   brand: FourRauBrand,
   imgUrl: '',
-  name: '4RauBarber Salon 4 Trần Quang Khải',
+  name: '4RauBarber Salon 4 Tran Quang Khai',
   numberOfSeat: 2,
   owner: OwnerFourRauBarber,
   status: 0,
@@ -62,7 +62,7 @@ export const CN2FourRauBarber: Store = {
 };
 export const AimShaverBarber: Store = {
   id: 1,
-  address: '6 Nguyễn Văn Linh, Q7, Tp. HCM',
+  address: '6 Nguyen Van Linh, Q7, Tp. HCM',
   brand: AimShaverBrand,
   imgUrl: '',
   name: 'Aim Shaver Barber',
@@ -117,7 +117,7 @@ export const AimShaverBarber: Store = {
 };
 export const CN1FourRauBarber: Store = {
   id: 1,
-  address: '634 Điện Biên Phủ, Q1, Tp. HCM',
+  address: '634 Dien Bien Phu, Q1, Tp. HCM',
   brand: FourRauBrand,
   imgUrl: '',
   name: 'CN1 4Rau Barber',
@@ -172,10 +172,10 @@ export const CN1FourRauBarber: Store = {
 };
 export const BaberNormalStore01: Store = {
   id: 1,
-  address: '88 Phan Đăng Giảng,P. Bình Hưng Hòa, Q. Bình Tân, Tp. HCM',
+  address: '88 Phan Dang Giang,P. Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: BaberBrand,
   imgUrl: '',
-  name: 'Hoàng Thiên Cắt Tóc Nam',
+  name: 'Hoang Thien Cat toc Nam',
   numberOfSeat: 3,
   owner: OwnerNormalStore01,
   status: 1,
@@ -227,7 +227,7 @@ export const BaberNormalStore01: Store = {
 };
 export const BiTyStore01: Store = {
   id: 4,
-  address: '2 Phan Đăng Giảng,P. Bình Hưng Hòa, Q. Bình Tân, Tp. HCM',
+  address: '2 Phan Dang Giang,P.Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: BiAndTyBrand,
   imgUrl: '',
   name: 'Bi & Ty',
@@ -282,7 +282,7 @@ export const BiTyStore01: Store = {
 };
 export const GudStore01: Store = {
   id: 5,
-  address: '7 Lê Trọng Tấn,P. Bình Hưng Hòa, Q. Bình Tân, Tp. HCM',
+  address: '7 Le Trong Tan,P. Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: GudBrand,
   imgUrl: '',
   name: 'Gud Store CN1',
@@ -337,7 +337,7 @@ export const GudStore01: Store = {
 };
 export const GentlemanStore01: Store = {
   id: 5,
-  address: '9 Lê Trọng Tấn,P. Bình Hưng Hòa, Q. Bình Tân, Tp. HCM',
+  address: '9 Le Trong Tan,P. Binh Hung Hoa, Q. Binh Tan, Tp. HCM',
   brand: GentlemanBrand,
   imgUrl: '',
   name: 'Gentleman Store',

@@ -84,7 +84,7 @@ export const OwnerNormalStore01: Account = {
 };
 export const OwnerGudStore01: Account = {
   id: '6',
-  displayName: 'Minh Nhật',
+  displayName: 'Minh Nhat',
   email: '',
   phone: '0123456789',
   photoUrl: GudLogo,
@@ -95,7 +95,7 @@ export const OwnerGudStore01: Account = {
 };
 export const OwnerGentlemanStore01: Account = {
   id: '7',
-  displayName: 'Trần Văn Cường',
+  displayName: 'Tran Van Cuong',
   email: '',
   phone: '0123456789',
   photoUrl: GentlemanLogo,

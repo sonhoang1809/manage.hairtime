@@ -74,7 +74,7 @@ export const BookingsData: Booking[] = [
       ManHairWaxService,
       ShampooService
     ],
-    status: 3,
+    status: 2,
     totalPrice: 5,
     discount: 1
   },
@@ -149,7 +149,7 @@ export const BookingsData: Booking[] = [
       ManHairWaxService,
       ShampooService
     ],
-    status: 3,
+    status: 2,
     totalPrice: 5,
     discount: 1
   },
@@ -164,7 +164,7 @@ export const BookingsData: Booking[] = [
       ManHairWaxService,
       ShampooService
     ],
-    status: 3,
+    status: 2,
     totalPrice: 5,
     discount: 2
   },
@@ -179,7 +179,7 @@ export const BookingsData: Booking[] = [
       ManHairWaxService,
       ShampooService
     ],
-    status: 3,
+    status: 2,
     totalPrice: 5,
     discount: 2
   },
@@ -194,7 +194,7 @@ export const BookingsData: Booking[] = [
       ManHairWaxService,
       ShampooService
     ],
-    status: 3,
+    status: 2,
     totalPrice: 5,
     discount: 1
   },
@@ -209,7 +209,7 @@ export const BookingsData: Booking[] = [
       ManHairWaxService,
       ShampooService
     ],
-    status: 3,
+    status: 2,
     totalPrice: 5,
     discount: 1
   }

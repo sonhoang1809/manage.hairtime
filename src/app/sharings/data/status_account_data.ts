@@ -8,7 +8,7 @@ export const NotVerifyYetAccount: StatusAccount = {
 
 export const WorkingAccount: StatusAccount = {
   id: 1,
-  name: 'Working'
+  name: 'Enable'
 };
 
 export const DisableAccount: StatusAccount = {
@@ -17,6 +17,6 @@ export const DisableAccount: StatusAccount = {
 };
 
 
-export const StatusAccounts :StatusAccount[]  = [
-  NotVerifyYetAccount, WorkingAccount, DisableAccount
+export const StatusAccounts: StatusAccount[] = [
+  WorkingAccount, DisableAccount
 ];

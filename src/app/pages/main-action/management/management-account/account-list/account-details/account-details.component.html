@@ -1,178 +1,32 @@
-<div *ngIf="data!=null">
-  <h3 class="card-header">Account Details</h3>
-  <form *ngIf="inputFormControl==null">
-    <div class="card-body">
-      <mat-spinner style="margin-left:auto;
-                              margin-right:auto;" color="accent" diameter=30>
-      </mat-spinner>
-    </div>
-  </form>
-  <form *ngIf="inputFormControl!=null; elseNull" [formGroup]="inputFormControl"
-    (ngSubmit)="onUpdate(inputFormControl.value,data.id);">
-    <div class="card-body">
-      <div class="row">
-        <mat-form-field appearance="outline" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-          <mat-label for="validationCustom01">User Name</mat-label>
-          <input matInput type="text" formControlName="customerName" required>
-
-          <mat-error *ngIf="generalService.hasErrorInputValidation('customerName','required',inputFormControl)">
-            User Name <strong>can not be null</strong>
-          </mat-error>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('customerName','maxlength',inputFormControl)">
-            User Name <strong>can not be more 50 characters</strong>
-          </mat-error>
-        </mat-form-field>
-        <div appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>User Avatar</mat-label>
-          <div>
-            <img src="{{data.photoUrl}}" alt="user" class="rounded" width="230" height="230">
-          </div>
-        </div>
-        <!-- <form appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>User Avatar</mat-label>
-          <div class="form-group">
-            <input type="file" name="image" (change)="fileProgress($event)" />
-          </div>
-          <div class="image-preview mb-3" *ngIf="previewUrl">
-            <img [src]="previewUrl" width="230" height="230" />
-          </div>
-          <div class="mb-3" *ngIf="uploadedFilePath">
-            {{uploadedFilePath}}
-          </div>
-        </form> -->
-        <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-        </div>
-        <mat-form-field appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label for="validationCustom03">Phone Number</mat-label>
-          <input matInput type="text" formControlName="phone" required>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('phone','required',inputFormControl)">
-            Phone Number <strong>can not be null</strong>
-          </mat-error>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('phone','maxlength',inputFormControl)">
-            Phone Number <strong>can not be more 10 characters</strong>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>Email</mat-label>
-          <input matInput type="text" formControlName="email" required>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('email','required',inputFormControl)">
-            Email <strong>can not be null</strong>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>Role User</mat-label>
-          <mat-select formControlName="role" required [(value)]="roleSelected">
-            <mat-option *ngFor="let role of roles" [value]="role.id">
-              {{role.name}}
-            </mat-option>
-          </mat-select>
-          <mat-hint align="end">Choose 1</mat-hint>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('role','required',inputFormControl)">
-            Role User <strong>can not be null</strong>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>Status Account</mat-label>
-          <mat-select formControlName="status" (selectionChange)="onChangeStatusAccount($event)"  required [(value)]="statusAccountSelected">
-            <mat-option *ngFor="let statusAccount of statusAccounts" [value]="statusAccount.id">
-              {{statusAccount.name}}
-            </mat-option>
-          </mat-select>
-          <mat-hint align="end">Choose 1</mat-hint>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('status','required',inputFormControl)">
-            Status Account <strong>can not be null</strong>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>Create At</mat-label>
-          <input matInput type="text" readonly value="{{data.createAt.toDateString()}}">
-        </mat-form-field>
-      </div>
-      <button mat-raised-button color="primary">Cancel</button>
-      <button mat-raised-button color="primary" class="float-right">Update</button>
-    </div>
-  </form>
+<div class="row">
+  <!-- ============================================================== -->
+  <!-- profile -->
+  <!-- ============================================================== -->
+  <div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
+    <!-- ============================================================== -->
+    <!-- card profile -->
+    <!-- ============================================================== -->
+    <app-account-details-information-contact [accountDetails]="accountDetails"></app-account-details-information-contact>
+    <!-- ============================================================== -->
+    <!-- end card profile -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- end profile -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- campaign data -->
+  <!-- ============================================================== -->
+  <div class="col-xl-9 col-lg-9 col-md-7 col-sm-12 col-12">
+    <!-- ============================================================== -->
+    <!-- campaign tab one -->
+    <!-- ============================================================== -->
+    <app-account-details-campaign></app-account-details-campaign>
+    <!-- ============================================================== -->
+    <!-- end campaign tab one -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- end campaign data -->
+  <!-- ============================================================== -->
 </div>
-<ng-template class="card" #elseBlock>
-  <h3 class="card-header">Add Account</h3>
-  <form [formGroup]="inputFormControl" (ngSubmit)="onUpdate(null);">
-    <div class="card-body">
-      <div class="row">
-        <mat-form-field appearance="outline" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-          <mat-label for="validationCustom01">User Name</mat-label>
-          <input matInput type="text" formControlName="customerName" required>
-
-          <mat-error *ngIf="generalService.hasErrorInputValidation('customerName','required',inputFormControl)">
-            User Name <strong>can not be null</strong>
-          </mat-error>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('customerName','maxlength',inputFormControl)">
-            User Name <strong>can not be more 50 characters</strong>
-          </mat-error>
-        </mat-form-field>
-        <!-- <div appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>User Avatar</mat-label>
-          <div>
-            <img src="{{data.photoUrl}}" alt="user" class="rounded" width="230" height="230">
-          </div>
-        </div> -->
-        <form appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>User Avatar</mat-label>
-          <div class="form-group">
-            <input type="file" name="image" (change)="fileProgress($event)" />
-          </div>
-          <div class="image-preview mb-3" *ngIf="previewUrl">
-            <img [src]="previewUrl" width="230" height="230" />
-          </div>
-          <div class="mb-3" *ngIf="uploadedFilePath">
-            {{uploadedFilePath}}
-          </div>
-        </form>
-        <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-        </div>
-        <mat-form-field appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label for="validationCustom03">Phone Number</mat-label>
-          <input matInput type="text" formControlName="phone" required>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('phone','required',inputFormControl)">
-            Phone Number <strong>can not be null</strong>
-          </mat-error>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('phone','maxlength',inputFormControl)">
-            Phone Number <strong>can not be more 10 characters</strong>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>Email</mat-label>
-          <input matInput type="text" formControlName="email" required>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('email','required',inputFormControl)">
-            Email <strong>can not be null</strong>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>Role User</mat-label>
-          <mat-select formControlName="role" required [(value)]="roleSelected">
-            <mat-option *ngFor="let role of roles" [value]="role.id">
-              {{role.name}}
-            </mat-option>
-          </mat-select>
-          <mat-hint align="end">Choose 1</mat-hint>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('role','required',inputFormControl)">
-            Role User <strong>can not be null</strong>
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-          <mat-label>Status Account</mat-label>
-          <mat-select formControlName="status" (selectionChange)="onChangeStatusAccount($event)" required [(value)]="statusAccountSelected">
-            <mat-option *ngFor="let statusAccount of statusAccounts" [value]="statusAccount.id">
-              {{statusAccount.name}}
-            </mat-option>
-          </mat-select>
-          <mat-hint align="end">Choose 1</mat-hint>
-          <mat-error *ngIf="generalService.hasErrorInputValidation('status','required',inputFormControl)">
-            Status Account <strong>can not be null</strong>
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <button mat-raised-button color="primary">Cancel</button>
-      <button mat-raised-button color="primary" class="float-right">Update</button>
-    </div>
-  </form>
-</ng-template>

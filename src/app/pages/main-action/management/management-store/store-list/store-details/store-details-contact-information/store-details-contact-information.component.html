@@ -27,7 +27,26 @@
         <li class="mb-2"><i class="fas fa-fw fa-envelope mr-2"></i>
           {{storeDetails.owner.email}}
         </li>
-        <li class="mb-0"><i class="fas fa-fw fa-phone mr-2"></i>{{storeDetails.owner.phone}}</li>
+        <li class="mb-0">
+          <i class="fas fa-fw fa-phone mr-2"></i>
+          {{storeDetails.owner.phone}}
+        </li>
+        <br>
+        <li class="mb-0">
+          <i class="fas fa-fw fa-location-arrow mr-2"></i>
+          {{storeDetails.address}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-body border-top">
+    <h3 class="font-16">Time Working</h3>
+    <div class="">
+      <ul class="list-unstyled mb-0">
+        <li class="mb-2" *ngFor="let workingTime of workingTimes">
+          <i class="fas fa-fw fa-hourglass mr-2"></i>
+          {{workingTime}}
+        </li>
+
       </ul>
     </div>
   </div>

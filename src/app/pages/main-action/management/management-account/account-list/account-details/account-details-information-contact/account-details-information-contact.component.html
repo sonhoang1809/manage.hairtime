@@ -1,3 +1,53 @@
-<p>
-  account-details-information-contact works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <div class="user-avatar text-center d-block">
+      <img src="{{accountDetails.photoUrl}}" alt="User Avatar" class="rounded-circle user-avatar-xxl">
+    </div>
+    <div class="text-center">
+      <h2 class="font-24 mb-0">{{accountDetails.displayName}}</h2>
+      <p>Barber Store</p>
+    </div>
+  </div>
+  <div class="card-body border-top">
+    <h3 class="font-16">Contact Information</h3>
+    <div class="">
+      <ul class="list-unstyled mb-0">
+        <li class="mb-2"><i class="fas fa-fw fa-envelope mr-2"></i>
+          {{accountDetails.email}}
+        </li>
+        <li class="mb-0"><i class="fas fa-fw fa-phone mr-2"></i>{{accountDetails.phone}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-body border-top">
+    <h3 class="font-16">Behavior Point</h3>
+    <h1 class="mb-0">2.8</h1>
+    <div class="rating-star">
+      <i class="fa fa-fw fa-star"></i>
+      <i class="fa fa-fw fa-star"></i>
+      <i class="fa fa-fw fa-star-half"></i>
+    </div>
+  </div>
+  <div class="card-body border-top">
+    <h3 class="font-16">Social Channels</h3>
+    <div class="">
+      <ul class="mb-0 list-unstyled">
+        <li class="mb-1"><a href="https://www.facebook.com/sonhoang/"><i
+              class="fab fa-fw fa-facebook-square mr-1 facebook-color"></i>facebook.com/sonhoang/</a></li>
+        <li class="mb-1"><a href="https://www.facebook.com/sonhoang/"><i
+              class="fab fa-fw fa-twitter-square mr-1 twitter-color"></i>twitter.com/sonhoang</a></li>
+        <li class="mb-1"><a href="#"><i
+              class="fab fa-fw fa-instagram mr-1 instagram-color"></i>instagram.com/sonhoang</a></li>
+        <li class="mb-1"><a href="#"><i
+              class="fab fa-fw fa-pinterest-square mr-1 pinterest-color"></i>pinterest.com/sonhoang</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-body border-top">
+    <h3 class="font-16">Role Account</h3>
+    <div>
+      <a href="#" class="badge badge-light mr-1">Customer</a>
+    </div>
+  </div>
+</div>

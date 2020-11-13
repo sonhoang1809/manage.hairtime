@@ -29,13 +29,10 @@
                 <span class="badge-dot badge-brand mr-1"></span>Booked
               </ng-template>
               <ng-template [ngIf]="booking.status==1">
-                <span class="badge-dot badge-primary mr-1"></span>Verified
+                <span class="badge-dot badge-danger mr-1"></span>Cancel
               </ng-template>
               <ng-template [ngIf]="booking.status==2">
                 <span class="badge-dot badge-success mr-1"></span>Checkout
-              </ng-template>
-              <ng-template [ngIf]="booking.status==3">
-                <span class="badge-dot badge-danger mr-1"></span>Cancel
               </ng-template>
             </td>
           </tr>

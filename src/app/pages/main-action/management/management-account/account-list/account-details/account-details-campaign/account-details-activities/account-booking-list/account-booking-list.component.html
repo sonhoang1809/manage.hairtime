@@ -1,5 +1,5 @@
 <div class="section-block">
-  <h3 class="section-title">Recent Customer Appointment</h3>
+  <h3 class="section-title">Recent Appointment</h3>
 </div>
 <div class="card" *ngFor="let bookingsData of bookingsDatas">
   <div class="card-body">
@@ -7,13 +7,15 @@
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="media influencer-profile-data d-flex align-items-center p-2">
           <div class="mr-4">
-            <img src="{{bookingsData.customer.photoUrl}}" alt="User Avatar" class="user-avatar-lg">
+            <img src="{{bookingsData.store.brand.iconUrl}}" alt="User Avatar"
+            class="user-avatar-lg" width="100" height="100">
           </div>
           <div class="media-body ">
             <div class="influencer-profile-data">
-              <h3 class="m-b-10">{{bookingsData.customer.displayName}} booking</h3>
+              <h3 class="m-b-10">{{bookingsData.store.name}}</h3>
               <p>
-                <span class="m-r-20 d-inline-block">Booking At
+                <span class="m-r-20 d-inline-block">
+                  Appointment At
                   <span class="m-l-10 text-primary">{{bookingsData.bookingAt.toDateString()}}</span>
                 </span>
               </p>
@@ -21,13 +23,16 @@
                 <span class="m-r-20 d-inline-block">Status
                   <span class="m-l-10 text-primary">
                     <ng-template [ngIf]="bookingsData.status==0">
-                      <span class="badge-dot badge-brand mr-1"></span>Booked
+                      <span class="badge-dot badge-brand mr-1"></span>Waiting
                     </ng-template>
                     <ng-template [ngIf]="bookingsData.status==1">
                       <span class="badge-dot badge-danger mr-1"></span>Cancel
                     </ng-template>
                     <ng-template [ngIf]="bookingsData.status==2">
                       <span class="badge-dot badge-success mr-1"></span>Checkout
+                    </ng-template>
+                    <ng-template [ngIf]="bookingsData.status==3">
+                      <span class="badge-dot badge-danger mr-1"></span>Cancel
                     </ng-template>
                   </span>
                 </span>

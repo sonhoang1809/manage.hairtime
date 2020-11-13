@@ -1,0 +1,52 @@
+<div class="card">
+  <h3 class="card-header">Reason Disable Account</h3>
+  <div class="card-body">
+
+    <div class="row">
+      <!-- <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" class="form-control form-control-lg" id="name" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" class="form-control form-control-lg" id="email" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control form-control-lg" id="subject" placeholder="">
+          </div> -->
+      <mat-card-content>
+        <mat-form-field appearance="outline" class="custom-control">
+          <mat-label for="validationCustom01">Reason</mat-label>
+          <mat-chip-list #chipList aria-label="Reason selection">
+            <input #reasonInput [formControl]="reasonCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+          <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+            <mat-option *ngFor="let filteredReason of filteredReasons | async" [value]="filteredReason">
+              {{filteredReason}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </mat-card-content>
+
+
+    </div>
+    <div class="row">
+      <mat-chip *ngFor="let selectedReason of selectedReasons" [selectable]="selectable" [removable]="removable"
+        (removed)="remove(selectedReason)">
+        {{selectedReason}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <button type="submit" class="btn btn-primary float-left">
+        Disable Account
+      </button>
+    </div>
+
+  </div>
+</div>
